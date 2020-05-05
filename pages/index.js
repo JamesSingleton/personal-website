@@ -21,7 +21,7 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>I’m a software engineer with a passion for building all things React and JavaScript. My team at American Express builds our enterprise web platform. When not writing JavaScript or pushing Open Source software, I’m likely to be found out on a hike with my two fur children or brushing up on my photography skills.</p>
+        <p>I’m a software engineer with a passion for building all things React and JavaScript. I currently work on the Enterprise Architecture team at American Express. When not writing JavaScript or pushing Open Source software, I’m likely to be found out on a hike with my two fur children or brushing up on my photography skills.</p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
