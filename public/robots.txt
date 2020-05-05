@@ -1,4 +1,4 @@
 # Ensure UTF-8 WITHOUT SIGNATURE- no BOM 
 
 User-agent: *
-Disallow: /
+Disallow: /api/
