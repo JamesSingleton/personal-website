@@ -13,7 +13,7 @@ export default class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head />
-        <body>
+        <body className="bg-teal-900">
           <Main />
           <NextScript />
           <AmpWrap

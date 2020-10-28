@@ -4,7 +4,7 @@ import { NAME, WEBSITE_DESCRIPTION } from '@/lib/constants';
 
 const ResumePage = () => (
   <Page title={`Resume | ${NAME} - ${WEBSITE_DESCRIPTION}`}>
-    <div className="paper">
+    <div className="mx-auto bg-white w-3/5">
       <Resume />
     </div>
   </Page>
