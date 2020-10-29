@@ -1,0 +1,74 @@
+[
+  {
+    "role": "Engineer II",
+    "company": "American Express",
+    "location": "Tempe, AZ",
+    "date": "2020 - Present",
+    "longDesc": [
+      "Worked on an Enterprise framework that powered 75% of experiences across American Express.",
+      "Open Sourced over and maintained over 20 repositories on GitHub",
+      "Supported engineers using our Enterprise framework.",
+      "Acted as a Developer Advocate for our framework internally and externally."
+    ],
+    "tags": "JavaScript, Node, ReactJS, Redux, Express",
+    "url": "https://www.americanexpress.com"
+  },
+  {
+    "role": "Engineer III",
+    "company": "American Express",
+    "location": "Tempe, AZ",
+    "date": "2019 - 2020",
+    "longDesc": [
+      "Worked on an Enterprise framework that powered 75% of experiences across American Express.",
+      "Open Sourced over and maintained over 20 repositories on GitHub",
+      "Supported engineers using our Enterprise framework.",
+      "Acted as a Developer Advocate for our framework internally and externally.",
+      "Onboarded teams to our Enterprise framework."
+    ],
+    "tags": "JavaScript, Node, ReactJS, Redux, Express",
+    "url": "https://www.americanexpress.com"
+  },
+  {
+    "role": "Lead UI Software Engineer",
+    "company": "American Express",
+    "location": "Sunrise, FL",
+    "date": "2018 - 2019",
+    "longDesc": [
+      "Lead an effort to migrate an application from Angular 1 to ReactJS.",
+      "Built an application used by over 1,200 Customer Care Professionals.",
+      "Responsible for and mentored six other front-end developers.",
+      "Worked closely with Product Managers as well as Designers to accomplish their goals."
+    ],
+    "tags": "JavaScript, Node, ReactJS, Redux, CSS, SCSS",
+    "url": "https://www.americanexpress.com"
+  },
+  {
+    "role": "Software Developer",
+    "company": "Internet Brands",
+    "location": "El Segundo, CA",
+    "date": "2017 - 2018",
+    "longDesc": [
+      "Lead the effort to migrate ApartmentRatings' manager portal to ReactJS",
+      "Implemented SEO improvements / web best practices to help boost ApartmentRatings Lighthouse scores.",
+      "Redesigned the homepage of ApartmentRatings.",
+      "Created new RESTful APIs using Java/Groovy.",
+      "Worked closely with Product Managers and UI/UX designers."
+    ],
+    "tags": "JavaScript, ReactJS, Redux, HTML, CSS, Java, Groovy, MySQL, SEO, Lighthouse",
+    "url": "https://www.internetbrands.com/"
+  },
+  {
+    "role": "Software Quality Assurance Engineer Intern",
+    "company": "Internet Brands",
+    "location": "El Segundo, CA",
+    "date": "2016 - 2017",
+    "longDesc": [
+      "Functioned as the sole QA Engineer for ApartmentRatings.",
+      "Assisted developers with issue analysis using JIRA, Confluence, SQLyog, MySQL and Python.",
+      "Created and executed test cases within TestRail and JIRA",
+      "Verified all deployments and bug fixes."
+    ],
+    "tags": "Python, Automation",
+    "url": "https://www.internetbrands.com/"
+  }
+]
