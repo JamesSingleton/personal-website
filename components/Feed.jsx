@@ -1,36 +1,65 @@
 import Item from './Item';
 
 const Feed = ({title}) => (
-  <div className="mx-auto bg-gray-50 pb-2 px-1 lg:pt-8 lg:pb-28 bg-gray-500">
-    <div className="max-w-7xl mx-auto">
-      <h2 className="text-center text-3xl font-bold">{title}</h2>
-      <div className="m-6 grid gap-12 max-w-lg mx-auto md:grid-cols-2 md:max-w-none lg:grid-cols-3 lg:max-w-none">
-        <Item
-          title="Hemp Extract Softgels"
-          desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ipsam ducimus quibusdam esse ratione totam hic quod quidem. Omnis quibusdam aperiam quasi pariatur odio, cum eum quis voluptatum. Velit, aliquid?"
-          price="65.00"
-          categoryLink="/products/cbd"
-          categoryType="cbd"
-          label="Best Seller"
-        />
-        <Item
-          title="Fresh Peppermint"
-          desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ipsam ducimus quibusdam esse ratione totam hic quod quidem. Omnis quibusdam aperiam quasi pariatur odio, cum eum quis voluptatum. Velit, aliquid?"
-          price="65.00"
-          categoryLink="/products/cbd"
-          categoryType="cbd"
-          label="Best Seller"
-        />
-        <Item
-          title="Gummy Rings"
-          desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ipsam ducimus quibusdam esse ratione totam hic quod quidem. Omnis quibusdam aperiam quasi pariatur odio, cum eum quis voluptatum. Velit, aliquid?"
-          price="65.00"
-          categoryLink="/products/cbd"
-          categoryType="cbd"
-          label="Best Seller"
-        />
-        
-      </div>
+  <div className="flex-1 w-full max-w-4xl px-4 py-8 mx-auto md:px-8 md:py-16">
+    <h2 className="inline-block -mx-3 p-3 mb-4 text-2xl md:text-3xl lg:text-4xl font-bold">{title}</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
+      <a className="h-full" href="https://github.com/JamesSingleton/learn-one-app" rel="noopener noreferrer" target="_blank">
+        <div className="cursor-pointer h-full mb-3 duration-500 ease-in-out transform hover:scale-105">
+          <div className="relative p-8 pb-16 bg-teal-900 h-full  text-default shadow-lg rounded-lg">
+            <div>
+              <h3 className="text-2xl font-semibold">
+                <span className="flex flex-wrap items-center">Learn One App</span>
+              </h3>
+              <p className="mt-2">
+                Website for learning One App.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a className="h-full" href="https://github.com/JamesSingleton/one-app-tools" rel="noopener noreferrer" target="_blank">
+        <div className="cursor-pointer h-full mb-3 duration-500 ease-in-out transform hover:scale-105">
+          <div className="relative p-8 pb-16 bg-teal-900 h-full  text-default shadow-lg rounded-lg">
+            <div>
+              <h3 className="text-2xl font-semibold">
+                <span className="flex flex-wrap items-center">One App Tools</span>
+              </h3>
+              <p className="mt-2">
+                A monorepo of tools to help with One App.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a className="h-full" href="https://github.com/americanexpress/one-app" rel="noopener noreferrer" target="_blank">
+        <div className="cursor-pointer h-full mb-3 duration-500 ease-in-out transform hover:scale-105">
+          <div className="relative p-8 pb-16 bg-teal-900 h-full  text-default shadow-lg rounded-lg">
+            <div>
+              <h3 className="text-2xl font-semibold">
+                <span className="flex flex-wrap items-center">One App</span>
+              </h3>
+              <p className="mt-2">
+                ✨ a fresh, modular take on web application development
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a className="h-full" href="https://github.com/JamesSingleton/hooks-arsenal" rel="noopener noreferrer" target="_blank">
+        <div className="cursor-pointer h-full mb-3 duration-500 ease-in-out transform hover:scale-105">
+          <div className="relative p-8 pb-16 bg-teal-900 h-full  text-default shadow-lg rounded-lg">
+            <div>
+              <h3 className="text-2xl font-semibold">
+                <span className="flex flex-wrap items-center">Hooks Arsenal</span>
+              </h3>
+              <p className="mt-2">
+                React Hooks library
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
     </div>
   </div>
 )

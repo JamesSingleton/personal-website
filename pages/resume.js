@@ -13,7 +13,7 @@ const ResumePage = () => (
     <div className="block md:hidden bg-white text-black p-2 mx-2">
       <SmallResume />
     </div>
-    <div className="mx-auto bg-white w-1/2 mt-12">
+    <div className="mx-auto bg-white mt-12 hidden md:block md:w-3/4 lg:w-1/2">
       <Resume />
     </div>
   </Page>

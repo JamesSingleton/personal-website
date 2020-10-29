@@ -12,10 +12,10 @@ const Index = () => (
       url={WEBSITE_URL}
       description={WEBSITE_DESCRIPTION}
     />
-    <main>
-      <Hero />
+    <Hero />
+    <section className="text-secondary bg-secondary bg-gray-900 text-white">
       <Feed title="Recent Projects" />
-    </main>
+    </section>
   </Page>
 )
 
