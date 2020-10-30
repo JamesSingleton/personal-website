@@ -19,7 +19,7 @@ const Post = ({ alt, date, image, title, url }) => (
         <div className="p-5 pb-16">
           <h2 className="text-2xl font-semibold">{title}</h2>
           <p>
-            Test
+            Test Post
           </p>
         </div>
       </div>
