@@ -15,7 +15,7 @@ const Header = () => {
           </Link>
         </div>
         <div className="block lg:hidden">
-          <button onClick={() => setNavbarOpen(!navbarOpen)} className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+          <button onClick={() => setNavbarOpen(!navbarOpen)} className="flex items-center px-3 py-2 border rounded text-gray-100 border-gray-300 hover:text-white hover:border-white">
             <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
           </button>
         </div>
@@ -27,17 +27,17 @@ const Header = () => {
         >
           <div className="lg:flex-grow lg:space-x-10 lg:text-right">
             <Link href="/about">
-              <a className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+              <a className="block mt-4 lg:inline-block lg:mt-0 text-gray-100 hover:text-white">
                 About Me
               </a>
             </Link>
             <Link href="/projects">
-              <a className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+              <a className="block mt-4 lg:inline-block lg:mt-0 text-gray-100 hover:text-white">
                 Projects
               </a>
             </Link>
             <Link href="/resume">
-              <a className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+              <a className="block mt-4 lg:inline-block lg:mt-0 text-gray-100 hover:text-white">
                 Resume
               </a>
             </Link>

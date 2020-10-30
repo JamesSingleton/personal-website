@@ -1,6 +1,6 @@
 import Page from '@/components/Page';
-import Resume from '@/components/resume/Resume'
-import SmallResume from '@/components/resume/SmallResume'
+import Resume from '@/components/Resume/Resume'
+import SmallResume from '@/components/Resume/SmallResume'
 import { NAME, WEBSITE_DESCRIPTION } from '@/lib/constants';
 
 const ResumePage = () => (
