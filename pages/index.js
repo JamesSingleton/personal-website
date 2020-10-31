@@ -19,7 +19,7 @@ const Index = () => (
       <Feed title="Projects" />
     </section>
     <section className=" text-gray-100">
-      <Posts />
+      {/* <Posts /> */}
     </section>
   </Page>
 )
