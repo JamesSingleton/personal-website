@@ -1,5 +1,5 @@
 import Page from '@/components/Page';
-import Resume from '@/components/Resume/Resume'
+import FullResume from '@/components/Resume/FullResume'
 import SmallResume from '@/components/Resume/SmallResume'
 import { NAME, WEBSITE_DESCRIPTION } from '@/lib/constants';
 
@@ -9,7 +9,7 @@ const ResumePage = () => (
       <SmallResume />
     </div>
     <div className="mx-auto bg-white mt-12 hidden md:block md:w-3/4 lg:w-1/2">
-      <Resume />
+      <FullResume />
     </div>
   </Page>
 );

@@ -6,7 +6,7 @@ import experienceData from '@/data/experience.json'
 import educationData from '@/data/education.json'
 import { CodeSkills } from '@/data/skills'
 
-const Resume = () => (
+const FullResume = () => (
   <div className="p-5">
     <h1 className="text-2xl font-bold">{NAME}</h1>
     <h2 className="text-sm font-semibold">www.jamessingleton.me | jamesrsingleton1@gmail.com</h2>
@@ -30,4 +30,4 @@ const Resume = () => (
   </div>
 )
 
-export default Resume;
+export default FullResume;
