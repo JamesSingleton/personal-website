@@ -7,6 +7,7 @@ import MoreStories from '@/components/Articles/more-stores'
 import PostHeader from '@/components/Articles/post-header'
 import PostBody from '@/components/Articles/post-body'
 import Page from '@/components/Page'
+import PostTitle from '@/components/Articles/post-title'
 import { getAllPostsWithSlug, getPostAndMorePosts } from '@/lib/api'
 import { NAME } from '@/lib/constants'
 
@@ -17,7 +18,7 @@ const Article = ({ post, morePosts, preview }) => {
     return <ErrorPage statusCode={404} />
   }
   return (
-    <Page title={`${post.title} | ${NAME}`}>
+    <Page>
        <Container>
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
