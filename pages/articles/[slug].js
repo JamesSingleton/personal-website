@@ -3,7 +3,7 @@ import Head from 'next/head'
 import ErrorPage from 'next/error'
 import Container from '@/components/Articles/container'
 import SectionSeparator from '@/components/Articles/section-separator'
-import MoreStories from '@/components/Articles/more-stores'
+import MoreArticles from '@/components/Articles/more-articles'
 import PostHeader from '@/components/Articles/post-header'
 import PostBody from '@/components/Articles/post-body'
 import Page from '@/components/Page'
@@ -38,7 +38,7 @@ const Article = ({ post, morePosts, preview }) => {
             </article>
             <SectionSeparator />
             {morePosts && morePosts.length > 0 && (
-              <MoreStories posts={morePosts} />
+              <MoreArticles posts={morePosts} />
             )}
           </>
         )}

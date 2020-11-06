@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Learn One App",
+    "url": "https://www.learn-one-app.com/",
+    "description": "Learn how to use One App."
+  },
+  {
+    "title": "One App",
+    "url": "https://one-amex-docs.americanexpress.com/",
+    "description": "A fresh, modular take on web application development using a framework for building fast, scalable, secure, and modular experiences."
+  },
+  {
+    "title": "Hooks Arsenal",
+    "url": "https://hooks-arsenal.vercel.app/",
+    "description": "An arsenal of React Hooks... aka, a React Hooks library."
+  },
+  {
+    "title": "React Building Modules",
+    "url": "https://github.com/JamesSingleton/react-building-modules",
+    "description": "React Component Library,"
+  }
+]
