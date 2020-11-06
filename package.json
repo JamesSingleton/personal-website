@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "setup": "node ./contentful/setup.js $CONTENTFUL_SPACE_ID $CONTENTFUL_MANAGEMENT_TOKEN"
   },
   "repository": {
     "type": "git",
@@ -20,12 +21,20 @@
   },
   "homepage": "https://github.com/JamesSingleton/singleton#readme",
   "dependencies": {
-    "date-fns": "^2.12.0",
+    "@contentful/rich-text-react-renderer": "^14.1.1",
+    "contentful": "^7.14.8",
+    "date-fns": "^2.16.1",
     "gray-matter": "^4.0.2",
-    "next": "^9.3.6",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-icons": "^3.11.0",
     "remark": "^12.0.0",
     "remark-html": "^11.0.1"
+  },
+  "devDependencies": {
+    "contentful-import": "^7.9.15",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "^1.9.6"
   }
 }

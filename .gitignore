@@ -5,6 +5,14 @@
 /.pnp
 .pnp.js
 
+# Yarn 2
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+
 # testing
 /coverage
 
@@ -28,3 +36,5 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+.vercel
+.env
