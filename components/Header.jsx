@@ -31,11 +31,6 @@ const Header = () => {
                 About Me
               </a>
             </Link>
-            <Link href="/projects">
-              <a className="block mt-4 lg:inline-block lg:mt-0 text-gray-100 hover:text-white">
-                Projects
-              </a>
-            </Link>
             <Link href="/resume">
               <a className="block mt-4 lg:inline-block lg:mt-0 text-gray-100 hover:text-white">
                 Resume

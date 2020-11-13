@@ -6,7 +6,7 @@ export default function Page({ title, description, sticky, children }) {
   return (
     <PageContainer title={title} description={description}>
       <Header sticky={sticky} />
-      <main>
+      <main className="mb-auto">
         {children}
       </main>
       <Footer />

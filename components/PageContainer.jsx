@@ -8,7 +8,7 @@ Router.events.on('routeChangeComplete', url => {
 });
 
 const PageContainer = ({ title, description, children, shouldIndex = true }) => (
-  <div>
+  <div className="flex flex-col h-screen">
     <Head>
       <title>{title || `${NAME} - ${WEBSITE_DESCRIPTION}`}</title>
       {description !== false && (
