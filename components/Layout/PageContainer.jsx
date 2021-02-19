@@ -1,13 +1,18 @@
-import Head from 'next/head';
-import Router from 'next/router';
-import { trackPageview } from '@/lib/analytics';
-import { NAME, WEBSITE_DESCRIPTION } from '@/lib/constants';
+import Head from "next/head";
+import Router from "next/router";
+import { trackPageview } from "@/lib/analytics";
+import { NAME, WEBSITE_DESCRIPTION } from "@/lib/constants";
 
-Router.events.on('routeChangeComplete', url => {
-  trackPageview(url)
+Router.events.on("routeChangeComplete", (url) => {
+  trackPageview(url);
 });
 
-const PageContainer = ({ title, description, children, shouldIndex = true }) => (
+const PageContainer = ({
+  title,
+  description,
+  children,
+  shouldIndex = true,
+}) => (
   <div className="flex flex-col h-screen">
     <Head>
       <title>{title || `${NAME} - ${WEBSITE_DESCRIPTION}`}</title>
@@ -21,6 +26,6 @@ const PageContainer = ({ title, description, children, shouldIndex = true }) => 
     </Head>
     {children}
   </div>
-)
+);
 
-export default PageContainer
+export default PageContainer;

@@ -13,10 +13,5 @@
     "title": "Hooks Arsenal",
     "url": "https://hooks-arsenal.vercel.app/",
     "description": "An arsenal of React Hooks... aka, a React Hooks library."
-  },
-  {
-    "title": "React Building Modules",
-    "url": "https://github.com/JamesSingleton/react-building-modules",
-    "description": "React Component Library,"
   }
 ]

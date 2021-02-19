@@ -1,51 +1,46 @@
-import { useState } from 'react';
-import Link from 'next/link';
-import ActiveLink from './ActiveLink'
+import { useState } from "react";
+import Link from "next/link";
+import ActiveLink from "./ActiveLink";
+import navlinks from "@/data/navlinks";
 
 const Header = () => (
-  <header className="bg-gray-800 max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div className="flex items-center justify-between h-16">
-      <div className="flex items-center">
-        <div className="flex-shrink-0">
-          <Link href="/">
-            <a>
-              <img className="block h-8 w-auto" src="/images/profile.png" alt="Workflow"/>
-            </a>
-          </Link>
+  <header className="relative">
+    <div className="bg-gray-900 pt-6">
+      <nav
+        className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
+        aria-label="Global"
+      >
+        <div className="flex items-center flex-1">
+          <div className="flex items-center justify-between w-full md:w-auto">
+            <Link href="/">
+              <a>
+                <span className="sr-only">Workflow</span>
+                <img
+                  className="h-8 w-auto sm:h-10"
+                  src="/images/profile.png"
+                  alt=""
+                />
+              </a>
+            </Link>
+          </div>
+          <div className="hidden space-x-1 md:flex md:ml-10">
+            {navlinks.map(({ link, label }) => (
+              <ActiveLink
+                href={link}
+                activeClassName="bg-gray-800 text-white"
+                inactiveClassName="text-gray-300 hover:bg-gray-700 hover:text-white"
+                key={label}
+              >
+                <a className="px-3 py-2 rounded-md text-base font-medium">
+                  {label}
+                </a>
+              </ActiveLink>
+            ))}
+          </div>
         </div>
-        <nav className="hidden sm:block sm:ml-6">
-          <ActiveLink
-            href="/about"
-            activeClassName="bg-gray-900 text-white"
-            inactiveClassName="text-gray-300 hover:bg-gray-700 hover:text-white"
-          >
-            <a className="px-3 py-2 rounded-md text-sm font-medium">About</a>
-          </ActiveLink>
-          <ActiveLink
-            href="/resume"
-            activeClassName="bg-gray-900 text-white"
-            inactiveClassName="text-gray-300 hover:bg-gray-700 hover:text-white"
-          >
-            <a className="px-3 py-2 rounded-md text-sm font-medium">Resume</a>
-          </ActiveLink>
-          <ActiveLink
-            href="/projects"
-            activeClassName="bg-gray-900 text-white"
-            inactiveClassName="text-gray-300 hover:bg-gray-700 hover:text-white"
-          >
-            <a className="px-3 py-2 rounded-md text-sm font-medium">Projects</a>
-          </ActiveLink>
-          <ActiveLink
-            href="/blog"
-            activeClassName="bg-gray-900 text-white"
-            inactiveClassName="text-gray-300 hover:bg-gray-700 hover:text-white"
-          >
-            <a className="px-3 py-2 rounded-md text-sm font-medium">Blog</a>
-          </ActiveLink>
-        </nav>
-      </div>
+      </nav>
     </div>
   </header>
-)
+);
 
 export default Header;
