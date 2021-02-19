@@ -36,13 +36,14 @@ const Index = () => {
                 {/* <img
                   className="object-cover lg:h-full lg:w-full"
                   src="/images/snow_picture.jpg"
-                  alt=""
+                  alt="James Singleton in the snow"
                 /> */}
                 <Image
                   className="object-cover lg:h-full lg:w-full"
                   src="/images/snow_picture.jpg"
                   width="2448"
                   height="3264"
+                  alt="James Singleton in the snow"
                 />
               </div>
             </div>
