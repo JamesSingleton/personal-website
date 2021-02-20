@@ -1,17 +1,20 @@
 [
   {
-    "title": "Learn One App",
-    "url": "https://www.learn-one-app.com/",
-    "description": "Learn how to use One App."
+    "status": "In Progress",
+    "title": "Finant",
+    "url": "https://finant.jamessingleton.me/",
+    "description": "Sample small business loan website."
   },
   {
-    "title": "One App",
-    "url": "https://one-amex-docs.americanexpress.com/",
-    "description": "A fresh, modular take on web application development using a framework for building fast, scalable, secure, and modular experiences."
+    "status": "In Progress",
+    "title": "Investead",
+    "url": "https://investead.jamessingleton.me/",
+    "description": "Sample real estate listing website."
   },
   {
-    "title": "Hooks Arsenal",
-    "url": "https://hooks-arsenal.vercel.app/",
-    "description": "An arsenal of React Hooks... aka, a React Hooks library."
+    "status": "In Progress",
+    "title": "Admin Dashboard",
+    "url": "https://admin-dashboard.jamessingleton.me/",
+    "description": "A simple admin dashboard."
   }
 ]

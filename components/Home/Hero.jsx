@@ -9,19 +9,18 @@ import {
 } from "@/lib/constants";
 
 const Hero = () => (
-  <div className="pt-10 pb-10 sm:pb-0 bg-gray-900 sm:pt-16 lg:pt-8 lg:overflow-hidden">
+  <div className="pt-4 pb-10 sm:pb-0 bg-gray-900 sm:pt-16 lg:pt-8 lg:overflow-hidden">
     <div className="mx-auto max-w-7xl lg:px-8">
       <div className="lg:grid lg:grid-cols-2 lg:gap-8">
         <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
           <div className="lg:py-16">
             <h1 className="space-x-4 mt-4 text-4xl tracking-tight font-extrabold text-center text-white sm:mt-5 sm:text-6xl sm:text-left lg:mt-6 xl:text-6xl">
-              <span>James</span>
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-rose-200 to-red-400">
-                Singleton
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-rose-200 to-red-500">
+                {NAME}
               </span>
             </h1>
             <p className="mt-3 text-base text-gray-300 text-center sm:mt-5 sm:text-xl sm:text-left lg:text-lg xl:text-xl">
-              Software Engineer @ American Express
+              {WEBSITE_DESCRIPTION}
             </p>
             <div className="mt-10 sm:mt-12 flex items-center justify-center sm:justify-start">
               <Link href="/about">
