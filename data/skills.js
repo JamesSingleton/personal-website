@@ -1,12 +1,10 @@
 export const CodeSkills = [
   "JavaScript",
   "HTML",
-  "Node",
-  "ReactJS",
-  "Redux",
-  "NextJS",
-  "Express",
-  "Typescript",
-  "GitHub Actions",
-  "Jest",
-]
+  "Node JS",
+  "React JS",
+  "Next JS",
+  "Git",
+  "CSS",
+  "SCSS",
+];

@@ -38,7 +38,7 @@ const ProjectsSection = () => (
                   href="https://financian.xyz"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="inline-flex items-center justify-center mt-6 text-base font-medium text-indigo-600"
+                  className="inline-flex items-center justify-center mt-6 text-base font-medium text-indigo-600"
                 >
                   Visit
                   <svg
@@ -78,7 +78,7 @@ const ProjectsSection = () => (
                   href="https://investead.xyz"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="inline-flex items-center justify-center mt-6 text-base font-medium text-indigo-600"
+                  className="inline-flex items-center justify-center mt-6 text-base font-medium text-indigo-600"
                 >
                   Visit
                   <svg
@@ -118,7 +118,7 @@ const ProjectsSection = () => (
                   href="https://admin-dashboard.jamessingleton.me"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="inline-flex items-center justify-center mt-6 text-base font-medium text-indigo-600"
+                  className="inline-flex items-center justify-center mt-6 text-base font-medium text-indigo-600"
                 >
                   Visit
                   <svg
@@ -159,7 +159,7 @@ const ProjectsSection = () => (
                   href="https://one-amex-docs.americanexpress.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="inline-flex items-center justify-center mt-6 text-base font-medium text-indigo-600"
+                  className="inline-flex items-center justify-center mt-6 text-base font-medium text-indigo-600"
                 >
                   Visit
                   <svg
@@ -200,7 +200,7 @@ const ProjectsSection = () => (
                   href="https://github.com/JamesSingleton/hooks-arsenal"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="inline-flex items-center justify-center mt-6 text-base font-medium text-indigo-600"
+                  className="inline-flex items-center justify-center mt-6 text-base font-medium text-indigo-600"
                 >
                   Visit
                   <svg
@@ -240,7 +240,7 @@ const ProjectsSection = () => (
                   href="https://www.learn-one-app.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="inline-flex items-center justify-center mt-6 text-base font-medium text-indigo-600"
+                  className="inline-flex items-center justify-center mt-6 text-base font-medium text-indigo-600"
                 >
                   Visit
                   <svg

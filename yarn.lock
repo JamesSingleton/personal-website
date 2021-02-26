@@ -214,6 +214,42 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@progress/kendo-drawing@npm:^1.9.1":
+  version: 1.9.4
+  resolution: "@progress/kendo-drawing@npm:1.9.4"
+  dependencies:
+    "@progress/pako-esm": ^1.0.1
+  checksum: ee4771687cf33f13625a1d69fea1b6eefa724d55fd6a84fe60cf66a633b96345411659ea9c929482f63ca5c644ac7c0d31dc3fd7ff57b373f328e31484e59dd3
+  languageName: node
+  linkType: hard
+
+"@progress/kendo-file-saver@npm:^1.0.1":
+  version: 1.1.0
+  resolution: "@progress/kendo-file-saver@npm:1.1.0"
+  checksum: eefdd66f1e5f472ee1ffb346a117fb2ff585d99a589f52a5b62f9b5063798cf42364d9867a77a2bc5f06e6f31a6175f073f4fe47b5872cf97ec327e2ca465635
+  languageName: node
+  linkType: hard
+
+"@progress/kendo-react-pdf@npm:^3.16.0":
+  version: 3.18.0
+  resolution: "@progress/kendo-react-pdf@npm:3.18.0"
+  dependencies:
+    "@progress/kendo-file-saver": ^1.0.1
+  peerDependencies:
+    "@progress/kendo-drawing": ^1.2.0
+    react: ^16.8.2
+    react-dom: ^16.8.2
+  checksum: 539461343d93c3adf40b608b40a752389d6af78133fc696a63703cae431f411a1118df7ef3f4b1595ad07da479a6597df8f6863fea89c1dfe7c05ab344786eb2
+  languageName: node
+  linkType: hard
+
+"@progress/pako-esm@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@progress/pako-esm@npm:1.0.1"
+  checksum: 0d8a8343c0f8dbf8d7091a6fe8139fa2899807da1804d569aeb3aab004f00c04d320940d80a8255ba875bbbe97a0337dcbb34348091c9074dc67d844aad3e186
+  languageName: node
+  linkType: hard
+
 "@samverschueren/stream-to-observable@npm:^0.3.0":
   version: 0.3.1
   resolution: "@samverschueren/stream-to-observable@npm:0.3.1"
@@ -3332,6 +3368,8 @@ fsevents@~2.3.1:
   dependencies:
     "@contentful/rich-text-react-renderer": ^14.1.1
     "@headlessui/react": ^0.2.0
+    "@progress/kendo-drawing": ^1.9.1
+    "@progress/kendo-react-pdf": ^3.16.0
     "@tailwindcss/aspect-ratio": ^0.2.0
     "@tailwindcss/forms": ^0.2.1
     "@tailwindcss/typography": ^0.4.0

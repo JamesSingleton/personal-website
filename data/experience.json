@@ -1,6 +1,6 @@
 [
   {
-    "role": "Engineer II",
+    "role": "Software Engineer II",
     "company": "American Express",
     "location": "Tempe, AZ",
     "date": "2020 - Present",
@@ -14,7 +14,7 @@
     "url": "https://www.americanexpress.com"
   },
   {
-    "role": "Engineer III",
+    "role": "Software Engineer III",
     "company": "American Express",
     "location": "Tempe, AZ",
     "date": "2019 - 2020",
@@ -55,7 +55,7 @@
       "Worked closely with Product Managers and UI/UX designers."
     ],
     "tags": "JavaScript, ReactJS, Redux, HTML, CSS, Java, Groovy, MySQL, SEO, Lighthouse",
-    "url": "https://www.internetbrands.com/"
+    "url": "https://www.apartmentratings.com/"
   },
   {
     "role": "Software Quality Assurance Engineer Intern",
@@ -69,6 +69,6 @@
       "Verified all deployments and bug fixes."
     ],
     "tags": "Python, Automation",
-    "url": "https://www.internetbrands.com/"
+    "url": "https://www.apartmentratings.com/"
   }
 ]

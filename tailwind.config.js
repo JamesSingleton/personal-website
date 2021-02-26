@@ -8,6 +8,9 @@ module.exports = {
         cyan: colors.cyan,
         rose: colors.rose,
       },
+      screens: {
+        print: { raw: "print" },
+      },
     },
   },
   plugins: [

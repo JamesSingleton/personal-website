@@ -23,6 +23,8 @@
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^14.1.1",
     "@headlessui/react": "^0.2.0",
+    "@progress/kendo-drawing": "^1.9.1",
+    "@progress/kendo-react-pdf": "^3.16.0",
     "autoprefixer": "latest",
     "contentful": "^7.14.8",
     "date-fns": "^2.16.1",
