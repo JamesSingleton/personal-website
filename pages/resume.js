@@ -1,8 +1,8 @@
 import { Component } from "react";
 import { PDFExport } from "@progress/kendo-react-pdf";
 import Page from "@/components/Layout/Page";
-import FullResume from "@/components/Resume/FullResume";
-import SmallResume from "@/components/Resume/SmallResume";
+import FullResume from "@/components/FullResume";
+import SmallResume from "@/components/SmallResume";
 import { NAME, WEBSITE_DESCRIPTION } from "@/lib/constants";
 
 class ResumePage extends Component {
