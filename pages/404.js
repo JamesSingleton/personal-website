@@ -7,7 +7,12 @@ const Custom404 = () => (
     <div className="min-h-screen flex items-center">
       <div className="container mx-auto p-4 flex flex-wrap items-center">
         <div className="w-full md:w-5/12 text-center p-4">
-          <Image src="/images/404.svg" height="500" width="500" />
+          <Image
+            src="/images/404.svg"
+            height="500"
+            width="500"
+            alt="404 Image"
+          />
         </div>
         <div className="w-full md:w-7/12 text-center md:text-left p-4">
           <div className="text-6xl font-medium">404</div>
