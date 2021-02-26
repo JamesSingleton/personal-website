@@ -1,6 +1,6 @@
 import NextDocument, { Head, Main, NextScript, Html } from "next/document";
-import { useAmp } from 'next/amp';
-import { GA_TRACKING_ID } from '@/lib/analytics'
+import { useAmp } from "next/amp";
+import { GA_TRACKING_ID } from "@/lib/analytics";
 
 function AmpWrap({ ampOnly, nonAmp }) {
   const isAmp = useAmp();
@@ -13,12 +13,16 @@ export default class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head />
-        <body className="bg-teal-900">
+        <body className="bg-gray-100">
           <Main />
           <NextScript />
           <AmpWrap
             ampOnly={
-              <amp-analytics type="googleanalytics" id="analytics1" data-credentials="include">
+              <amp-analytics
+                type="googleanalytics"
+                id="analytics1"
+                data-credentials="include"
+              >
                 <script
                   type="application/json"
                   dangerouslySetInnerHTML={{
@@ -27,16 +31,16 @@ export default class Document extends NextDocument {
                         account: GA_TRACKING_ID,
                         gtag_id: GA_TRACKING_ID,
                         config: {
-                          GA_TRACKING_ID: { groups: 'default' }
-                        }
+                          GA_TRACKING_ID: { groups: "default" },
+                        },
                       },
                       triggers: {
                         trackPageview: {
-                          on: 'visible',
-                          request: 'pageview'
-                        }
-                      }
-                    })
+                          on: "visible",
+                          request: "pageview",
+                        },
+                      },
+                    }),
                   }}
                 />
               </amp-analytics>
@@ -56,7 +60,7 @@ export default class Document extends NextDocument {
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
                     gtag('config', '${GA_TRACKING_ID}');
-                  `
+                  `,
                   }}
                 />
               </>

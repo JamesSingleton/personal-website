@@ -1,42 +1,31 @@
-import Page from '@/components/Page';
-import SocialMeta from '@/components/SocialMeta';
-import Hero from '@/components/Hero'
-import Posts from '@/components/Home/Posts/Posts'
-import Projects from '@/components/Home/Projects/Projects'
-import { NAME, WEBSITE_URL, WEBSITE_DESCRIPTION } from '@/lib/constants';
-import { getAllPostsForHome } from '@/lib/api'
-import MoreArticles from '@/components/Articles/more-articles';
+import Link from "next/link";
+import Image from "next/image";
+import Page from "@/components/Layout/Page";
+import SocialMeta from "@/components/SocialMeta";
+import Hero from "@/components/Home/Hero";
+import ProjectsSection from "@/components/Home/ProjectsSection";
+import {
+  NAME,
+  WEBSITE_URL,
+  WEBSITE_DESCRIPTION,
+  TWITTER_USER_NAME,
+  LINKEDIN_USER_NAME,
+} from "@/lib/constants";
+import MoreArticles from "@/components/Articles/more-articles";
 
-
-const Index = ({allPosts}) => {
-  const morePosts = allPosts.slice(0,4)
+const Index = () => {
   return (
     <Page title={`Home | ${NAME} - ${WEBSITE_DESCRIPTION}`}>
-      <SocialMeta 
+      <SocialMeta
         image="/static/twitter-cards/home.jpg"
         title={`Home | ${NAME} - ${WEBSITE_DESCRIPTION}`}
         url={WEBSITE_URL}
         description={WEBSITE_DESCRIPTION}
       />
       <Hero />
-      <section className="bg-gray-900 text-gray-100">
-        <Projects />
-      </section>
-      <section className=" text-gray-100">
-        {morePosts.length > 0 && <Posts posts={morePosts} />}
-      </section>
+      <ProjectsSection />
     </Page>
   );
-}
-
-export async function getStaticProps({preview = false}) {
-  const allPosts = await getAllPostsForHome(preview)
-  return {
-    props: {
-      preview,
-      allPosts
-    }
-  }
-}
+};
 
 export default Index;

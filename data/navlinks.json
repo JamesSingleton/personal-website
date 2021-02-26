@@ -1,0 +1,18 @@
+[
+  {
+    "link": "/about",
+    "label": "About"
+  },
+  {
+    "link": "/projects",
+    "label": "Projects"
+  },
+  {
+    "link": "/resume",
+    "label": "Resume"
+  },
+  {
+    "link": "/blog",
+    "label": "Blog"
+  }
+]
