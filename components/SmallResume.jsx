@@ -9,9 +9,9 @@ import { CodeSkills } from "@/data/skills";
 const SmallResume = () => (
   <div className="p-5">
     <h1 className="text-2xl font-bold">{NAME}</h1>
-    <h3 className="text-sm font-semibold">
+    <h2 className="text-sm font-semibold">
       www.jamessingleton.me | jamesrsingleton1@gmail.com
-    </h3>
+    </h2>
     <p className="text-xs border-light-grey border-b-2 pb-3 mb-3">
       Software Engineer with a passion for learning new technologies.
     </p>

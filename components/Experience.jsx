@@ -2,7 +2,7 @@ import { FaBriefcase } from "react-icons/fa";
 
 const Experience = ({ experience }) => (
   <>
-    <h5 className="flex items-center text-xs mb-1 text-blue-700 font-semibold">
+    <h3 className="flex items-center text-xs mb-1 text-blue-700 font-semibold">
       <svg
         className="mr-1 h-4 w-4"
         xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +17,7 @@ const Experience = ({ experience }) => (
         <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
       </svg>
       EXPERIENCE
-    </h5>
+    </h3>
     {experience.map((item, index) => (
       <div
         className={`m1-b  ${
@@ -26,9 +26,9 @@ const Experience = ({ experience }) => (
         key={`${item.company}, ${item.location} | ${item.date}`}
       >
         <h3 className="text-sm font-bold">{item.role}</h3>
-        <h5 className="text-xs my-1 font-semibold">
+        <h4 className="text-xs my-1 font-semibold">
           {`${item.company}, ${item.location} | ${item.date}`}
-        </h5>
+        </h4>
 
         {item.longDesc.map((desc) => (
           <div className="text-xs flex ml-2" key={desc}>

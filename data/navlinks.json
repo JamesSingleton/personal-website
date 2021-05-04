@@ -4,15 +4,11 @@
     "label": "About"
   },
   {
-    "link": "/projects",
-    "label": "Projects"
-  },
-  {
     "link": "/resume",
     "label": "Resume"
   },
   {
-    "link": "/blog",
+    "link": "/posts",
     "label": "Blog"
   }
 ]

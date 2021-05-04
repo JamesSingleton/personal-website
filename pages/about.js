@@ -5,7 +5,7 @@ import { NAME, WEBSITE_DESCRIPTION } from "@/lib/constants";
 // import markdownStyles from '@/components/Articles/markdown-styles.module.css'
 
 const About = ({ data }) => (
-  <Page>
+  <Page title={`About | ${NAME}`} description="Read about James Singleton">
     <div className="px-4 py-4 sm:px-6 lg:px-8">
       <div className="text-lg max-w-prose mx-auto prose prose-indigo">
         <h1 className="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">

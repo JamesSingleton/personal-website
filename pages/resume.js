@@ -3,16 +3,24 @@ import { PDFExport } from "@progress/kendo-react-pdf";
 import Page from "@/components/Layout/Page";
 import FullResume from "@/components/FullResume";
 import SmallResume from "@/components/SmallResume";
-import { NAME, WEBSITE_DESCRIPTION } from "@/lib/constants";
+import { NAME } from "@/lib/constants";
+import { event } from "@/lib/gtag";
 
 class ResumePage extends Component {
   pdfExportComponent;
   render() {
     return (
-      <Page title={`Resume | ${NAME} - ${WEBSITE_DESCRIPTION}`}>
+      <Page title={`Resume | ${NAME}`} description="Resume of James Singleton">
         <div className="w-full text-center">
           <button
-            onClick={() => this.pdfExportComponent.save()}
+            onClick={() => {
+              event({
+                action: "Click",
+                category: "Resume",
+                label: "Resume Download Button",
+              });
+              this.pdfExportComponent.save();
+            }}
             className="my-8 py-3 px-4 rounded-md shadow bg-gradient-to-r from-rose-500 to-red-600 text-white font-medium hover:from-red-600 hover:to-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 focus:ring-offset-gray-900"
           >
             Download Resume
@@ -23,7 +31,7 @@ class ResumePage extends Component {
         </div>
         <div
           style={{ width: "49.60625rem" }}
-          className=" rounded mx-auto mb-8 hidden bg-white lg:block"
+          className="border rounded mx-auto mb-8 hidden bg-white lg:block"
         >
           <PDFExport
             scale={0.75}

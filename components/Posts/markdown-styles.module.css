@@ -10,12 +10,12 @@
 }
 
 .markdown p {
-  @apply  text-gray-100 text-xl font-semibold;
+  @apply text-gray-900 text-xl font-semibold;
 }
 
 @screen md {
   .markdown p {
-    @apply text-justify
+    @apply text-justify;
   }
 }
 

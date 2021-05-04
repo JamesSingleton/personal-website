@@ -2,7 +2,7 @@ import { FaRegFileCode } from "react-icons/fa";
 
 const SkillsSection = ({ heading, icon, colClass, skills, noBorderTop }) => (
   <>
-    <h5
+    <h3
       className={`${
         !noBorderTop ? "border-light-grey border-t-2  mt-2 pt-2" : " mt-0"
       }  flex items-center text-xs mb-1 text-blue-700 font-semibold`}
@@ -20,7 +20,7 @@ const SkillsSection = ({ heading, icon, colClass, skills, noBorderTop }) => (
         />
       </svg>
       {heading}
-    </h5>
+    </h3>
     <div className={colClass}>
       {skills.map((skill) => (
         <div key={skill} className="pad-0">

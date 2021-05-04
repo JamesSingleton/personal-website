@@ -77,30 +77,7 @@ const BottomMobileNavigation = () => (
         </a>
       </ActiveLink>
       <ActiveLink
-        href="/projects"
-        activeClassName="bg-gray-100"
-        inactiveClassName="text-gray-400"
-      >
-        <a className="w-full justify-center inline-block text-center py-3">
-          <svg
-            className="inline-block mb-1 h-6 w-6"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-            />
-          </svg>
-          <span className="tab tab-whishlist block text-xs">Projects</span>
-        </a>
-      </ActiveLink>
-      <ActiveLink
-        href="/blog"
+        href="/posts"
         activeClassName="bg-gray-100"
         inactiveClassName="text-gray-400"
       >

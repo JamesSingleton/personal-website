@@ -1,11 +1,11 @@
-import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import ActiveLink from "./ActiveLink";
 import navlinks from "@/data/navlinks";
 
 const Header = () => (
   <header className="relative">
-    <div className="bg-gray-900 py-6">
+    <div className="bg-gray-900 py-3">
       <nav
         className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
         aria-label="Global"
@@ -15,10 +15,12 @@ const Header = () => (
             <Link href="/">
               <a>
                 <span className="sr-only">Workflow</span>
-                <img
+                <Image
                   className="h-8 w-auto sm:h-10"
                   src="/images/profile.png"
-                  alt=""
+                  alt="James Singleton Avatar"
+                  height="40"
+                  width="40"
                 />
               </a>
             </Link>

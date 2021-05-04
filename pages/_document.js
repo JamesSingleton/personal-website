@@ -1,6 +1,7 @@
-import NextDocument, { Head, Main, NextScript, Html } from "next/document";
+import Document, { Head, Main, NextScript, Html } from "next/document";
 import { useAmp } from "next/amp";
-import { GA_TRACKING_ID } from "@/lib/analytics";
+import { GA_TRACKING_ID } from "@/lib/gtag";
+import AmpAnalytics from "@/components/Amp/AmpAnalytics";
 
 function AmpWrap({ ampOnly, nonAmp }) {
   const isAmp = useAmp();
@@ -8,44 +9,38 @@ function AmpWrap({ ampOnly, nonAmp }) {
   return !isAmp && nonAmp;
 }
 
-export default class Document extends NextDocument {
+export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
         <Head />
-        <body className="bg-gray-100">
+        <body className="bg-gray-50">
           <Main />
           <NextScript />
+          {/* AMP - Google Analytics */}
           <AmpWrap
             ampOnly={
-              <amp-analytics
+              <AmpAnalytics
                 type="googleanalytics"
-                id="analytics1"
-                data-credentials="include"
-              >
-                <script
-                  type="application/json"
-                  dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                      vars: {
-                        account: GA_TRACKING_ID,
-                        gtag_id: GA_TRACKING_ID,
-                        config: {
-                          GA_TRACKING_ID: { groups: "default" },
-                        },
-                      },
-                      triggers: {
-                        trackPageview: {
-                          on: "visible",
-                          request: "pageview",
-                        },
-                      },
-                    }),
-                  }}
-                />
-              </amp-analytics>
+                script={{
+                  vars: {
+                    account: GA_TRACKING_ID,
+                    gtag_id: GA_TRACKING_ID,
+                    config: {
+                      [GA_TRACKING_ID]: { groups: "default" },
+                    },
+                  },
+                  triggers: {
+                    trackPageview: {
+                      on: "visible",
+                      request: "pageview",
+                    },
+                  },
+                }}
+              />
             }
           />
+          {/* Non-AMP - Google Analytics */}
           <AmpWrap
             nonAmp={
               <>
@@ -56,11 +51,11 @@ export default class Document extends NextDocument {
                 <script
                   dangerouslySetInnerHTML={{
                     __html: `
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', '${GA_TRACKING_ID}');
-                  `,
+                      window.dataLayer = window.dataLayer || [];
+                      function gtag(){dataLayer.push(arguments);}
+                      gtag('js', new Date());
+                      gtag('config', '${GA_TRACKING_ID}');
+                    `,
                   }}
                 />
               </>

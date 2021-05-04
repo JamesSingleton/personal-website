@@ -1,10 +1,10 @@
-import Head from "next/head";
+import SocialMeta from "../SocialMeta";
 import Router from "next/router";
-import { trackPageview } from "@/lib/analytics";
+import { pageview } from "@/lib/gtag";
 import { NAME, WEBSITE_DESCRIPTION } from "@/lib/constants";
 
 Router.events.on("routeChangeComplete", (url) => {
-  trackPageview(url);
+  pageview(url);
 });
 
 const PageContainer = ({
@@ -14,16 +14,10 @@ const PageContainer = ({
   shouldIndex = true,
 }) => (
   <div className="flex flex-col h-screen">
-    <Head>
-      <title>{title || `${NAME} - ${WEBSITE_DESCRIPTION}`}</title>
-      {description !== false && (
-        <meta
-          name="description"
-          content={description || `${NAME} - ${WEBSITE_DESCRIPTION}`}
-        />
-      )}
-      {!shouldIndex && <meta name="robots" content="noindex" />}
-    </Head>
+    <SocialMeta
+      title={title || `${NAME} - ${WEBSITE_DESCRIPTION}`}
+      description={description || `${WEBSITE_DESCRIPTION}`}
+    />
     {children}
   </div>
 );
