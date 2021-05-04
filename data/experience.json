@@ -1,9 +1,18 @@
 [
   {
+    "role": "Senior Software Engineer",
+    "company": "Zendesk",
+    "location": "Remote",
+    "date": "2021 - Present",
+    "longDesc": ["Working on the Customer Service Admin team."],
+    "tags": "JavaScript, React, Cypress, GitHub Actions",
+    "url": "https://www.zendesk.com/"
+  },
+  {
     "role": "Software Engineer II",
     "company": "American Express",
     "location": "Tempe, AZ",
-    "date": "2020 - Present",
+    "date": "2020 - 2021",
     "longDesc": [
       "Worked on an Enterprise framework that powered 75% of experiences across American Express.",
       "Open Sourced over and maintained over 20 repositories on GitHub",
