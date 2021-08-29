@@ -29,7 +29,7 @@
     "contentful": "^7.14.8",
     "date-fns": "^2.16.1",
     "gray-matter": "^4.0.2",
-    "next": "^10.0.7",
+    "next": "^11.1.0",
     "postcss": "latest",
     "react": "latest",
     "react-dom": "latest",
