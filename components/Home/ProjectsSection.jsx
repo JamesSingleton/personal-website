@@ -149,14 +149,14 @@ const ProjectsSection = () => (
                   </span>
                 </div>
                 <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                  One App
+                  HLB Electric
                 </h3>
                 <p className="mt-5 text-base text-gray-500">
-                  A fresh, modular take on web application development made by
-                  American Express.
+                  A website I built for a local electrician here in Maricopa,
+                  AZ.
                 </p>
                 <a
-                  href="https://one-amex-docs.americanexpress.com/"
+                  href="https://www.hlbelectric.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center mt-6 text-base font-medium text-indigo-600"

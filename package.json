@@ -7,6 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "lint": "next lint",
     "setup": "node ./contentful/setup.js $CONTENTFUL_SPACE_ID $CONTENTFUL_MANAGEMENT_TOKEN"
   },
   "repository": {
@@ -21,30 +22,30 @@
   },
   "homepage": "https://github.com/JamesSingleton/singleton#readme",
   "dependencies": {
-    "@contentful/rich-text-react-renderer": "^14.1.1",
-    "@headlessui/react": "^0.2.0",
-    "@progress/kendo-drawing": "^1.9.1",
-    "@progress/kendo-react-pdf": "^3.16.0",
-    "autoprefixer": "latest",
-    "contentful": "^7.14.8",
-    "date-fns": "^2.16.1",
-    "gray-matter": "^4.0.2",
-    "next": "^10.0.7",
-    "postcss": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "react-icons": "^3.11.0",
-    "remark": "^12.0.0",
-    "remark-html": "^11.0.1"
+    "@contentful/rich-text-react-renderer": "^15.3.3",
+    "@headlessui/react": "^1.4.1",
+    "autoprefixer": "^10.3.4",
+    "contentful": "^8.5.7",
+    "date-fns": "^2.23.0",
+    "gray-matter": "^4.0.3",
+    "next": "^11.1.2",
+    "postcss": "^8.3.6",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
+    "remark": "^14.0.1",
+    "remark-html": "^14.0.1"
   },
   "devDependencies": {
-    "@tailwindcss/aspect-ratio": "^0.2.0",
-    "@tailwindcss/forms": "^0.2.1",
-    "@tailwindcss/typography": "^0.4.0",
-    "contentful-import": "^7.9.15",
-    "globby": "^11.0.1",
+    "@tailwindcss/aspect-ratio": "^0.2.1",
+    "@tailwindcss/forms": "^0.3.3",
+    "@tailwindcss/typography": "^0.4.1",
+    "contentful-import": "^8.2.5",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.2",
+    "globby": "^12.0.2",
     "postcss-preset-env": "^6.7.0",
-    "prettier": "^2.2.1",
-    "tailwindcss": "latest"
+    "prettier": "^2.4.0",
+    "tailwindcss": "^2.2.15"
   }
 }
