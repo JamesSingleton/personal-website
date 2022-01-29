@@ -1,34 +1,28 @@
-import {
-  FaUsersCog,
-  FaHome,
-  FaDollarSign,
-  FaJs,
-  FaReact,
-} from "react-icons/fa";
+import { FaUsersCog, FaHome, FaDollarSign, FaJs, FaReact } from 'react-icons/fa'
 
 const ProjectsSection = () => (
   <div className="relative bg-white py-16 sm:py-24 lg:py-32">
-    <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
-      <h2 className="text-base font-semibold tracking-wider text-cyan-600 uppercase">
+    <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+      <h2 className="text-base font-semibold uppercase tracking-wider text-cyan-600">
         Projects
       </h2>
-      <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
+      <p className="mt-2 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
         Open Source and Personal Projects
       </p>
-      <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
+      <p className="mx-auto mt-5 max-w-prose text-xl text-gray-500">
         A mix of personal projects and open source contributions on GitHub
       </p>
       <div className="mt-12">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <div className="pt-6">
-            <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+            <div className="flow-root rounded-lg bg-gray-50 px-6 pb-8">
               <div className="-mt-6">
                 <div>
-                  <span className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-rose-500 to-red-600 rounded-md shadow-lg">
+                  <span className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-rose-500 to-red-600 p-3 shadow-lg">
                     <FaDollarSign className="h-6 w-6 text-white" />
                   </span>
                 </div>
-                <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
+                <h3 className="mt-8 text-lg font-medium tracking-tight text-gray-900">
                   Financian
                 </h3>
                 <p className="mt-5 text-base text-gray-500">
@@ -38,7 +32,7 @@ const ProjectsSection = () => (
                   href="https://financian.xyz"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center mt-6 text-base font-medium text-indigo-600"
+                  className="mt-6 inline-flex items-center justify-center text-base font-medium text-indigo-600"
                 >
                   Visit
                   <svg
@@ -61,14 +55,14 @@ const ProjectsSection = () => (
           </div>
 
           <div className="pt-6">
-            <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+            <div className="flow-root rounded-lg bg-gray-50 px-6 pb-8">
               <div className="-mt-6">
                 <div>
-                  <span className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-rose-500 to-red-600 rounded-md shadow-lg">
+                  <span className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-rose-500 to-red-600 p-3 shadow-lg">
                     <FaHome className="h-6 w-6 text-white" />
                   </span>
                 </div>
-                <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
+                <h3 className="mt-8 text-lg font-medium tracking-tight text-gray-900">
                   Investead
                 </h3>
                 <p className="mt-5 text-base text-gray-500">
@@ -78,7 +72,7 @@ const ProjectsSection = () => (
                   href="https://investead.xyz"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center mt-6 text-base font-medium text-indigo-600"
+                  className="mt-6 inline-flex items-center justify-center text-base font-medium text-indigo-600"
                 >
                   Visit
                   <svg
@@ -101,14 +95,14 @@ const ProjectsSection = () => (
           </div>
 
           <div className="pt-6">
-            <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+            <div className="flow-root rounded-lg bg-gray-50 px-6 pb-8">
               <div className="-mt-6">
                 <div>
-                  <span className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-rose-500 to-red-600 rounded-md shadow-lg">
+                  <span className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-rose-500 to-red-600 p-3 shadow-lg">
                     <FaUsersCog className="h-6 w-6 text-white" />
                   </span>
                 </div>
-                <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
+                <h3 className="mt-8 text-lg font-medium tracking-tight text-gray-900">
                   Admin Dashboard
                 </h3>
                 <p className="mt-5 text-base text-gray-500">
@@ -118,7 +112,7 @@ const ProjectsSection = () => (
                   href="https://admin-dashboard.jamessingleton.me"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center mt-6 text-base font-medium text-indigo-600"
+                  className="mt-6 inline-flex items-center justify-center text-base font-medium text-indigo-600"
                 >
                   Visit
                   <svg
@@ -141,14 +135,14 @@ const ProjectsSection = () => (
           </div>
 
           <div className="pt-6">
-            <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+            <div className="flow-root rounded-lg bg-gray-50 px-6 pb-8">
               <div className="-mt-6">
                 <div>
-                  <span className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-rose-500 to-red-600 rounded-md shadow-lg">
+                  <span className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-rose-500 to-red-600 p-3 shadow-lg">
                     <FaJs className="h-6 w-6 text-white" />
                   </span>
                 </div>
-                <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
+                <h3 className="mt-8 text-lg font-medium tracking-tight text-gray-900">
                   HLB Electric
                 </h3>
                 <p className="mt-5 text-base text-gray-500">
@@ -159,7 +153,7 @@ const ProjectsSection = () => (
                   href="https://www.hlbelectric.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center mt-6 text-base font-medium text-indigo-600"
+                  className="mt-6 inline-flex items-center justify-center text-base font-medium text-indigo-600"
                 >
                   Visit
                   <svg
@@ -182,14 +176,14 @@ const ProjectsSection = () => (
           </div>
 
           <div className="pt-6">
-            <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+            <div className="flow-root rounded-lg bg-gray-50 px-6 pb-8">
               <div className="-mt-6">
                 <div>
-                  <span className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-rose-500 to-red-600 rounded-md shadow-lg">
+                  <span className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-rose-500 to-red-600 p-3 shadow-lg">
                     <FaReact className="h-6 w-6 text-white" />
                   </span>
                 </div>
-                <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
+                <h3 className="mt-8 text-lg font-medium tracking-tight text-gray-900">
                   Hooks Arsenal
                 </h3>
                 <p className="mt-5 text-base text-gray-500">
@@ -200,7 +194,7 @@ const ProjectsSection = () => (
                   href="https://github.com/JamesSingleton/hooks-arsenal"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center mt-6 text-base font-medium text-indigo-600"
+                  className="mt-6 inline-flex items-center justify-center text-base font-medium text-indigo-600"
                 >
                   Visit
                   <svg
@@ -223,14 +217,14 @@ const ProjectsSection = () => (
           </div>
 
           <div className="pt-6">
-            <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+            <div className="flow-root rounded-lg bg-gray-50 px-6 pb-8">
               <div className="-mt-6">
                 <div>
-                  <span className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-rose-500 to-red-600 rounded-md shadow-lg">
+                  <span className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-rose-500 to-red-600 p-3 shadow-lg">
                     <FaJs className="h-6 w-6 text-white" />
                   </span>
                 </div>
-                <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
+                <h3 className="mt-8 text-lg font-medium tracking-tight text-gray-900">
                   Learn One App
                 </h3>
                 <p className="mt-5 text-base text-gray-500">
@@ -240,7 +234,7 @@ const ProjectsSection = () => (
                   href="https://www.learn-one-app.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center mt-6 text-base font-medium text-indigo-600"
+                  className="mt-6 inline-flex items-center justify-center text-base font-medium text-indigo-600"
                 >
                   Visit
                   <svg
@@ -265,6 +259,6 @@ const ProjectsSection = () => (
       </div>
     </div>
   </div>
-);
+)
 
-export default ProjectsSection;
+export default ProjectsSection

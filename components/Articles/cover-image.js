@@ -1,10 +1,9 @@
 import cn from 'classnames'
 import Image from 'next/image'
 
-
 export default function CoverImage({ title, url, slug }) {
   const image = (
-    <Image 
+    <Image
       src={`https:${url}`}
       alt={`Cover Image for ${title}`}
       width="1240"

@@ -10,23 +10,23 @@
 }
 
 .markdown p {
-  @apply  text-gray-100 text-xl font-semibold;
+  @apply text-xl font-semibold text-gray-100;
 }
 
 @screen md {
   .markdown p {
-    @apply text-justify
+    @apply text-justify;
   }
 }
 
 .markdown a {
-  @apply underline text-blue-500;
+  @apply text-blue-500 underline;
 }
 
 .markdown h2 {
-  @apply text-3xl mt-12 mb-4 leading-snug;
+  @apply mt-12 mb-4 text-3xl leading-snug;
 }
 
 .markdown h3 {
-  @apply text-2xl mt-8 mb-4 leading-snug;
+  @apply mt-8 mb-4 text-2xl leading-snug;
 }

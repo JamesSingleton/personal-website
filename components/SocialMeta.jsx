@@ -1,15 +1,20 @@
-import Head from 'next/head';
+import Head from 'next/head'
 import { TWITTER_USER_NAME } from '@/lib/constants'
 
 const SocialMeta = ({ title, description, image, url, keywords }) => (
   <Head>
     <meta name="twitter:site" content={`@${TWITTER_USER_NAME}`} />
-    <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
+    <meta
+      name="twitter:card"
+      content={image ? 'summary_large_image' : 'summary'}
+    />
     {title && <meta name="og:title" content={title} />}
     {url && <meta name="og:url" content={url} />}
     {description && <meta name="description" content={description} />}
     {description && <meta name="og:description" content={description} />}
-    {image && <meta name="og:image" content={`https://jamessingleton.me${image}`} />}
+    {image && (
+      <meta name="og:image" content={`https://jamessingleton.me${image}`} />
+    )}
     {keywords && <meta name="keywords" content={keywords} />}
   </Head>
 )

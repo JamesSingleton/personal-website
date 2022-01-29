@@ -13,8 +13,8 @@ export default function PostPreview({
 }) {
   return (
     <Link classname="h-full" as={`/articles/${slug}`} href="/articles/[slug]">
-      <div className="cursor-pointer h-full mb-3 duration-500 ease-in-out transform hover:scale-105">
-        <div className="bg-gray-900 h-full text-gray-100 shadow-lg rounded-lg rounded">
+      <div className="mb-3 h-full transform cursor-pointer duration-500 ease-in-out hover:scale-105">
+        <div className="h-full rounded-lg rounded bg-gray-900 text-gray-100 shadow-lg">
           <div className="block">
             <figure className="relative w-full">
               <CoverImage title={title} slug={slug} url={coverImage.url} />
@@ -25,7 +25,7 @@ export default function PostPreview({
             <div className="mb-4">
               <DateComponent dateString={date} />
             </div>
-            <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
+            <p className="mb-4 text-lg leading-relaxed">{excerpt}</p>
             {author && <Avatar name={author.name} picture={author.picture} />}
           </div>
         </div>

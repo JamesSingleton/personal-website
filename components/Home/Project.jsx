@@ -1,7 +1,7 @@
-import Link from "next/link";
+import Link from 'next/link'
 
 const Project = ({ url, title, description }) => (
-  <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
+  <div className="flex flex-col overflow-hidden rounded-lg shadow-lg">
     <div className="flex-shrink-0">
       <img
         className="h-48 w-full object-cover"
@@ -9,14 +9,14 @@ const Project = ({ url, title, description }) => (
         alt=""
       />
     </div>
-    <div className="flex-1 bg-white p-6 flex flex-col justify-between">
+    <div className="flex flex-1 flex-col justify-between bg-white p-6">
       <div className="flex-1">
         <p className="text-sm font-medium text-indigo-600">
           <a href="#" className="hover:underline">
             Article
           </a>
         </p>
-        <a href="#" className="block mt-2">
+        <a href="#" className="mt-2 block">
           <p className="text-xl font-semibold text-gray-900">
             Boost your conversion rate
           </p>
@@ -53,6 +53,6 @@ const Project = ({ url, title, description }) => (
       </div>
     </div>
   </div>
-);
+)
 
-export default Project;
+export default Project

@@ -1,30 +1,30 @@
-import Image from "next/image";
-import Link from "next/link";
-import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
+import Image from 'next/image'
+import Link from 'next/link'
+import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa'
 import {
   NAME,
   WEBSITE_DESCRIPTION,
   TWITTER_USER_NAME,
   LINKEDIN_USER_NAME,
-} from "@/lib/constants";
+} from '@/lib/constants'
 
 const Hero = () => (
-  <div className="pt-4 pb-10 sm:pb-0 bg-gray-900 sm:pt-16 lg:pt-8 lg:overflow-hidden">
+  <div className="bg-gray-900 pt-4 pb-10 sm:pb-0 sm:pt-16 lg:overflow-hidden lg:pt-8">
     <div className="mx-auto max-w-7xl lg:px-8">
       <div className="lg:grid lg:grid-cols-2 lg:gap-8">
-        <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
+        <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:flex lg:items-center lg:px-0 lg:text-left">
           <div className="lg:py-16">
-            <h1 className="space-x-4 mt-4 text-4xl tracking-tight font-extrabold text-center text-white sm:mt-5 sm:text-6xl sm:text-left lg:mt-6 xl:text-6xl">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-rose-200 to-red-500">
+            <h1 className="mt-4 space-x-4 text-center text-4xl font-extrabold tracking-tight text-white sm:mt-5 sm:text-left sm:text-6xl lg:mt-6 xl:text-6xl">
+              <span className="bg-gradient-to-r from-rose-200 to-red-500 bg-clip-text text-transparent">
                 {NAME}
               </span>
             </h1>
-            <p className="mt-3 text-base text-gray-300 text-center sm:mt-5 sm:text-xl sm:text-left lg:text-lg xl:text-xl">
+            <p className="mt-3 text-center text-base text-gray-300 sm:mt-5 sm:text-left sm:text-xl lg:text-lg xl:text-xl">
               {WEBSITE_DESCRIPTION}
             </p>
-            <div className="mt-10 sm:mt-12 flex items-center justify-center sm:justify-start">
+            <div className="mt-10 flex items-center justify-center sm:mt-12 sm:justify-start">
               <Link href="/about">
-                <a className="block py-3 px-4 rounded-md shadow bg-gradient-to-r from-rose-500 to-red-600 text-white font-medium hover:from-red-600 hover:to-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 focus:ring-offset-gray-900">
+                <a className="block rounded-md bg-gradient-to-r from-rose-500 to-red-600 py-3 px-4 font-medium text-white shadow hover:from-red-600 hover:to-red-700 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900">
                   About Me
                 </a>
               </Link>
@@ -49,7 +49,7 @@ const Hero = () => (
             </div>
           </div>
         </div>
-        <div className="mt-12 -mb-16 hidden sm:block sm:-mb-48 lg:m-0 lg:relative">
+        <div className="mt-12 -mb-16 hidden sm:-mb-48 sm:block lg:relative lg:m-0">
           <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
             <Image
               alt="Avatar of James Singleton"
@@ -62,5 +62,5 @@ const Hero = () => (
       </div>
     </div>
   </div>
-);
-export default Hero;
+)
+export default Hero
