@@ -4,6 +4,7 @@ import { FC, useEffect } from 'react'
 import type { AppProps } from 'next/app'
 import Router from 'next/router'
 import ProgressBar from '@badrap/bar-of-progress'
+import { AnimatePresence, AnimateSharedLayout } from 'framer-motion'
 import { Head } from '@components/common'
 
 const Noop: FC = ({ children }) => <>{children}</>

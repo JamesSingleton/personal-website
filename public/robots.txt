@@ -1,4 +1,10 @@
-# Ensure UTF-8 WITHOUT SIGNATURE- no BOM 
-
+# *
 User-agent: *
-Disallow: /api/
+Allow: /
+
+# Host
+Host: https://www.jamessingleton.me
+
+# Sitemaps
+Sitemap: https://www.jamessingleton.me/sitemap.xml
+Sitemap: https://www.jamessingleton.me/sitemap-0.xml
