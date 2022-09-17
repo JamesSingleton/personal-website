@@ -20,7 +20,8 @@ const securityHeaders = [
 /** @type {import('next').NextConfig} */
 module.exports = {
   experimental: {
-    optimizeCss: true,
+    newNextLinkBehavior: true,
+    scrollRestoration: true,
   },
   productionBrowserSourceMaps: true,
   swcMinify: true,

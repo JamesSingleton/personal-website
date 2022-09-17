@@ -1,61 +1,152 @@
-import { NextSeo } from 'next-seo'
-import { Layout } from '@components/common'
-import { NAME, WEBSITE_DESCRIPTION } from '@lib/constants'
-// import { getAllSimpleText } from '@/lib/api'
-// import markdownStyles from '@/components/Articles/markdown-styles.module.css'
+import { SVGProps } from 'react'
+import Image from 'next/future/image'
+import Head from 'next/head'
+import Link from 'next/link'
+import clsx from 'clsx'
 
-const About = () => (
-  <>
-    <NextSeo title="About" />
-    <div className="px-4 py-4 sm:px-6 lg:px-8">
-      <div className="prose prose-indigo mx-auto max-w-prose text-lg">
-        <h1 className="mt-2 block text-center text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">
-          About Me
-        </h1>
-        <p className="mt-8 text-xl leading-8 text-gray-700">
-          I graduated from Virginia Military Institute with a Bachelor of
-          Science in Computer Science. Most of the time you can find me coding
-          in React, JavaScript & Next.js but I am always open to learning new
-          languages. When developing I like to ensure that my code is clean,
-          accessible as well as performant.
-        </p>
-        <p className="mt-8 text-xl leading-8 text-gray-700">
-          I joined American Express in October 2018 as a Lead UI Engineer for
-          the Customer 360 team which falls under the Global Risk Technologies
-          umbrella in their Sunrise, FL campus. During my time on the team, I
-          led a team of six UI engineers in an effort to migrate the existing
-          application written in Angular 1 over to a React.js framework created
-          by American Express called{' '}
-          <a
-            href="https://github.com/americanexpress/one-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            One App
-          </a>
-          . We released the revamped application at the beginning of August 2019
-          to over 1,200 Customer Care Professionals.
-        </p>
-        <p className="mt-8 text-xl leading-8 text-gray-700">
-          After a year of being on the consuming end of One App, I decided to
-          move to the team that created it. In October 2019, I moved to the One
-          Amex team in their Tempe, AZ office. When I first joined their team I
-          was in charge of onboarding all new teams within American Express to
-          our framework. This included provisioning their environments as well
-          as walking teams the ins and outs of our framework. Since then I have
-          transitioned to being an integral part of the team and have helped
-          open source twenty-seven libraries on GitHub in the past year.
-        </p>
-        <p className="mt-8 text-xl leading-8 text-gray-700">
-          When I am not working, you can often find me hiking the deserts of
-          Arizona with my two dogs Xena and Nola, or brushing up on my
-          photography skills.
-        </p>
-      </div>
-    </div>
-  </>
-)
+import {
+  Container,
+  TwitterIcon,
+  InstagramIcon,
+  GitHubIcon,
+  LinkedInIcon,
+} from '@components/ui'
 
-About.Layout = Layout
+import portraitImage from '@public/images/james_singleton.webp'
 
-export default About
+function SocialLink({
+  className,
+  href,
+  children,
+  icon: Icon,
+}: {
+  className?: string
+  href: string
+  children: React.ReactNode
+  icon: React.FC<SVGProps<SVGSVGElement>>
+}) {
+  return (
+    <li className={clsx(className, 'flex')}>
+      <Link
+        href={href}
+        className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
+      >
+        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
+        <span className="ml-4">{children}</span>
+      </Link>
+    </li>
+  )
+}
+
+function MailIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <path
+        fillRule="evenodd"
+        d="M6 5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H6Zm.245 2.187a.75.75 0 0 0-.99 1.126l6.25 5.5a.75.75 0 0 0 .99 0l6.25-5.5a.75.75 0 0 0-.99-1.126L12 12.251 6.245 7.187Z"
+      />
+    </svg>
+  )
+}
+
+export default function About() {
+  return (
+    <>
+      <Head>
+        <title>About - James Singleton</title>
+        <meta
+          name="description"
+          content="I'm James Singleton. I live in Maricopa, AZ, where I design the future."
+        />
+      </Head>
+      <Container className="mt-16 sm:mt-32">
+        <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
+          <div className="lg:pl-20">
+            <div className="max-w-xs px-2.5 lg:max-w-none">
+              <Image
+                src={portraitImage}
+                alt=""
+                sizes="(min-width: 1024px) 32rem, 20rem"
+                className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover object-top dark:bg-zinc-800"
+              />
+            </div>
+          </div>
+          <div className="lg:order-first lg:row-span-2">
+            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+              I&apos;m James Singleton. Software engineer, founder, and amateur
+              photographer
+            </h1>
+            <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+              <p>
+                I&apos;ve loved making things for as long as I can remember, and
+                wrote my first program when I was 6 years old, just two weeks
+                after my mom brought home the brand new Macintosh LC 550 that I
+                taught myself to type on.
+              </p>
+              <p>
+                The only thing I loved more than computers as a kid was space.
+                When I was 8, I climbed the 40-foot oak tree at the back of our
+                yard while wearing my older sister&apos;s motorcycle helmet,
+                counted down from three, and jumped — hoping the tree was tall
+                enough that with just a bit of momentum I&apos;d be able to get
+                to orbit.
+              </p>
+              <p>
+                I spent the next few summers indoors working on a rocket design,
+                while I recovered from the multiple surgeries it took to fix my
+                badly broken legs. It took nine iterations, but when I was 15 I
+                sent my dad&apos;s Blackberry into orbit and was able to
+                transmit a photo back down to our family computer from space.
+              </p>
+              <p>
+                Today, I&apos;m the founder of Planetaria, where we&apos;re
+                working on civilian space suits and manned shuttle kits you can
+                assemble at home so that the next generation of kids really{' '}
+                <em>can</em> make it to orbit — from the comfort of their own
+                backyards.
+              </p>
+            </div>
+          </div>
+          <div className="lg:pl-20">
+            <ul role="list">
+              <SocialLink
+                href="https://twitter.com/ThisIsSingleton"
+                icon={TwitterIcon}
+              >
+                Follow on Twitter
+              </SocialLink>
+              <SocialLink
+                href="https://www.instagram.com/james.r.singleton"
+                icon={InstagramIcon}
+                className="mt-4"
+              >
+                Follow on Instagram
+              </SocialLink>
+              <SocialLink
+                href="https://github.com/JamesSingleton"
+                icon={GitHubIcon}
+                className="mt-4"
+              >
+                Follow on GitHub
+              </SocialLink>
+              <SocialLink
+                href="https://www.linkedin.com/in/jamesrsingleton/"
+                icon={LinkedInIcon}
+                className="mt-4"
+              >
+                Follow on LinkedIn
+              </SocialLink>
+              <SocialLink
+                href="mailto:jamesrsingleton1@gmail.com"
+                icon={MailIcon}
+                className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
+              >
+                jamesrsingleton1@gmail.com
+              </SocialLink>
+            </ul>
+          </div>
+        </div>
+      </Container>
+    </>
+  )
+}

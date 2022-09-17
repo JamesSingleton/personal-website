@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { Layout } from '@components/common'
 
 const Custom404 = () => (
   <div className="min-h-screen bg-white px-4 py-16 sm:px-6 sm:py-24 md:grid md:place-items-center lg:px-8">
@@ -29,7 +28,5 @@ const Custom404 = () => (
     </div>
   </div>
 )
-
-Custom404.Layout = Layout
 
 export default Custom404

@@ -1,6 +1,4 @@
 import { NextSeo } from 'next-seo'
-import { ArrowRightIcon } from '@heroicons/react/outline'
-import { Layout } from '@components/common'
 
 const Career = () => {
   return (
@@ -215,7 +213,5 @@ const Career = () => {
     </>
   )
 }
-
-Career.Layout = Layout
 
 export default Career

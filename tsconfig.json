@@ -19,9 +19,19 @@
       "@lib/*": ["lib/*"],
       "@config/*": ["config/*"],
       "@components/*": ["components/*"],
-      "@styles/*": ["styles/*"]
+      "@styles/*": ["styles/*"],
+      "@public/*": ["public/*"],
+      "@types": ["types/index"],
+      "@types/*": ["types/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.d.ts", "**/*.ts", "**/*.tsx", "**/*.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "components/common/Header.jsx"
+  ],
   "exclude": ["node_modules"]
 }

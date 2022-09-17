@@ -1,45 +1,39 @@
-import '@styles/main.css'
-import '@styles/chrome-bug.css'
-import { FC, useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import type { AppProps } from 'next/app'
-import Router from 'next/router'
-import ProgressBar from '@badrap/bar-of-progress'
-import { AnimatePresence, AnimateSharedLayout } from 'framer-motion'
-import { Head } from '@components/common'
 
-const Noop: FC = ({ children }) => <>{children}</>
+import { Footer, Head, Header } from '@components/common'
 
-const progress = new ProgressBar({
-  size: 2,
-  color: '#38bdf8',
-  className: 'bar-of-progress',
-  delay: 100,
-})
+import '@styles/main.css'
+import 'focus-visible'
 
-// this fixes safari jumping to the bottom of the page
-// when closing the search modal using the `esc` key
-if (typeof window !== 'undefined') {
-  progress.start()
-  progress.finish()
-}
-
-Router.events.on('routeChangeStart', () => progress.start())
-Router.events.on('routeChangeComplete', () => progress.finish())
-Router.events.on('routeChangeError', () => progress.finish())
-
-export default function MyApp({ Component, pageProps }: AppProps) {
-  const Layout = (Component as any).Layout || Noop
+function usePrevious(value: string) {
+  let ref = useRef() as React.MutableRefObject<string>
 
   useEffect(() => {
-    document.body.classList?.remove('loading')
-  }, [])
+    ref.current = value
+  }, [value])
+
+  return ref.current
+}
+
+export default function App({ Component, pageProps, router }: AppProps) {
+  let previousPathname = usePrevious(router.pathname)
 
   return (
     <>
       <Head />
-      <Layout pageProps={pageProps}>
-        <Component {...pageProps} />
-      </Layout>
+      <div className="fixed inset-0 flex justify-center sm:px-8">
+        <div className="flex w-full max-w-7xl lg:px-8">
+          <div className="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20" />
+        </div>
+      </div>
+      <div className="relative">
+        <Header />
+        <main>
+          <Component previousPathname={previousPathname} {...pageProps} />
+        </main>
+        <Footer />
+      </div>
     </>
   )
 }

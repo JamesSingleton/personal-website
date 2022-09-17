@@ -1,4 +1,6 @@
-export { default as Head } from './Head'
-export { default as Layout } from './Layout'
-export { default as Navbar } from './Navbar'
-export { default as Footer } from './Footer'
+import Head from './Head'
+import { Header } from './Header'
+import Footer from './Footer'
+import SimpleLayout from './SimpleLayout'
+
+export { Head, Header, Footer, SimpleLayout }
