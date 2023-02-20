@@ -1,8 +1,9 @@
 import { SVGProps } from 'react'
-import Image from 'next/future/image'
+import Image from 'next/image'
 import Head from 'next/head'
 import Link from 'next/link'
 import clsx from 'clsx'
+import { NextSeo } from 'next-seo'
 
 import {
   TwitterIcon,
@@ -26,7 +27,7 @@ import logoRedshirtSports from '@public/images/logos/redshirt-sports.svg'
 // import { getAllArticles } from '@/lib/getAllArticles'
 // import { formatDate } from '@/lib/formatDate'
 
-import type { StaticImageData } from 'next/future/image'
+import type { StaticImageData } from 'next/image'
 
 interface ResumeProps {
   company: string
@@ -300,15 +301,10 @@ function Photos() {
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>
-          James Singleton - Software engineer, founder, and amateur photographer
-        </title>
-        <meta
-          name="description"
-          content="I'm James, a software enginer for Zendesk based in Maricopa, Arizona. I'm the founder of Redshirt Sports, where I along with a team of writers report on FCS College Football."
-        />
-      </Head>
+      <NextSeo
+        title="Software engineer, founder, and amateur photographer"
+        description="I'm James, a software enginer for Zendesk based in Maricopa, Arizona. I'm the founder of Redshirt Sports, where I along with a team of writers report on FCS College Football."
+      />
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
