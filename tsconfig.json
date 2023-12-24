@@ -23,7 +23,12 @@
       "@public/*": ["public/*"],
       "@types": ["types/index"],
       "@types/*": ["types/*"]
-    }
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "next-env.d.ts",
@@ -31,7 +36,7 @@
     "**/*.ts",
     "**/*.tsx",
     "**/*.js",
-    "components/common/Header.jsx"
+    ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
 }

@@ -18,16 +18,12 @@ const securityHeaders = [
 ]
 
 /** @type {import('next').NextConfig} */
-module.exports = {
-  experimental: {
-    scrollRestoration: true,
-  },
+const nextConfig = {
   productionBrowserSourceMaps: true,
   swcMinify: true,
   reactStrictMode: true,
   images: {
     formats: ['image/avif', 'image/webp'],
-    domains: ['images.unsplash.com', 'images.ctfassets.net'],
   },
   async headers() {
     return [
@@ -38,3 +34,5 @@ module.exports = {
     ]
   },
 }
+
+export default nextConfig

@@ -9,8 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "setup": "node ./contentful/setup.js $CONTENTFUL_SPACE_ID $CONTENTFUL_MANAGEMENT_TOKEN",
-    "prettier-fix": "prettier --write .",
-    "postbuild": "next-sitemap"
+    "prettier-fix": "prettier --write ."
   },
   "repository": {
     "type": "git",
@@ -24,34 +23,32 @@
   },
   "homepage": "https://github.com/JamesSingleton/singleton#readme",
   "dependencies": {
-    "@headlessui/react": "^1.7.11",
-    "@heroicons/react": "^2.0.16",
-    "clsx": "^1.2.1",
-    "date-fns": "^2.29.3",
+    "@headlessui/react": "^1.7.17",
+    "clsx": "^2.0.0",
+    "date-fns": "^3.0.6",
     "feed": "^4.2.2",
     "focus-visible": "^5.2.0",
-    "next": "^13.1.6",
-    "next-seo": "^5.15.0",
+    "geist": "^1.2.0",
+    "lucide-react": "^0.301.0",
+    "next": "^14.0.4",
+    "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sharp": "^0.31.3"
+    "sharp": "^0.33.1"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@tailwindcss/forms": "^0.5.3",
-    "@tailwindcss/typography": "^0.5.9",
-    "@types/node": "^18.14.0",
-    "@types/react": "^18.0.28",
-    "autoprefixer": "^10.4.13",
-    "eslint": "^8.34.0",
-    "eslint-config-next": "^13.1.6",
-    "next-sitemap": "^3.1.52",
-    "postcss": "^8.4.21",
-    "postcss-focus-visible": "^8.0.2",
-    "postcss-preset-env": "^8.0.1",
-    "prettier": "^2.8.4",
-    "prettier-plugin-tailwindcss": "^0.2.3",
-    "tailwindcss": "^3.2.7",
-    "typescript": "^4.9.5"
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.10",
+    "@types/node": "^20.10.5",
+    "@types/react": "^18.2.45",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.0.4",
+    "postcss": "^8.4.32",
+    "prettier": "^3.1.1",
+    "prettier-plugin-tailwindcss": "^0.5.9",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.3.3"
   }
 }
