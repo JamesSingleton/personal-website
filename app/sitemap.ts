@@ -1,13 +1,15 @@
 import { MetadataRoute } from 'next'
-
-const websiteUrl = 'https://www.jamessingleton.me'
+import { headers } from 'next/headers'
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const headersList = headers()
+  const domain = headersList.get('host') as string
+  const websiteUrl = `https://www.${domain}`
+
   return [
     {
       url: websiteUrl,
       lastModified: new Date(),
-      changeFrequency: 'yearly',
       priority: 1,
     },
     {
