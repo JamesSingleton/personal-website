@@ -160,7 +160,7 @@ function Photos() {
           <div
             key={image.src}
             className={clsx(
-              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
+              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800',
               rotations[imageIndex % rotations.length],
             )}
           >
@@ -182,7 +182,7 @@ export default function Home() {
     <>
       <Container className="mt-9">
         <div className="max-w-2xl">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
             Software engineer, founder, and amateur photographer.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
@@ -217,7 +217,7 @@ export default function Home() {
       <Photos />
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          <div className="flex flex-col gap-16">Articles will go here</div>
+          <div className="flex flex-col gap-16"></div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             {/* <Newsletter /> */}
             <Resume />
