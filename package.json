@@ -1,5 +1,5 @@
 {
-  "name": "my-blog",
+  "name": "personal-website",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "setup": "node ./contentful/setup.js $CONTENTFUL_SPACE_ID $CONTENTFUL_MANAGEMENT_TOKEN"
+    "setup": "node ./contentful/setup.js $CONTENTFUL_SPACE_ID $CONTENTFUL_MANAGEMENT_TOKEN",
+    "prettier-fix": "prettier --write ."
   },
   "repository": {
     "type": "git",
@@ -22,30 +23,32 @@
   },
   "homepage": "https://github.com/JamesSingleton/singleton#readme",
   "dependencies": {
-    "@contentful/rich-text-react-renderer": "^15.4.0",
-    "@headlessui/react": "^1.4.1",
-    "autoprefixer": "^10.3.5",
-    "contentful": "^8.5.8",
-    "date-fns": "^2.24.0",
-    "gray-matter": "^4.0.3",
-    "next": "^11.1.2",
-    "postcss": "^8.3.7",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-icons": "^4.2.0",
-    "remark": "^14.0.1",
-    "remark-html": "^14.0.1"
+    "@headlessui/react": "^1.7.17",
+    "clsx": "^2.0.0",
+    "date-fns": "^3.0.6",
+    "feed": "^4.2.2",
+    "focus-visible": "^5.2.0",
+    "geist": "^1.2.0",
+    "lucide-react": "^0.301.0",
+    "next": "^14.0.4",
+    "next-themes": "^0.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sharp": "^0.33.1"
   },
   "devDependencies": {
-    "@tailwindcss/aspect-ratio": "^0.2.1",
-    "@tailwindcss/forms": "^0.3.3",
-    "@tailwindcss/typography": "^0.4.1",
-    "contentful-import": "^8.2.9",
-    "eslint": "7.32.0",
-    "eslint-config-next": "11.1.2",
-    "globby": "^12.0.2",
-    "postcss-preset-env": "^6.7.0",
-    "prettier": "^2.4.1",
-    "tailwindcss": "^2.2.15"
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.10",
+    "@types/node": "^20.10.5",
+    "@types/react": "^18.2.45",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.0.4",
+    "postcss": "^8.4.32",
+    "prettier": "^3.1.1",
+    "prettier-plugin-tailwindcss": "^0.5.9",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.3.3"
   }
 }

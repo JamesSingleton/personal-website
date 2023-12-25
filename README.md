@@ -1,12 +1,12 @@
 # 👋 Welcome to my site's repo.
 
-You can see it live here: [``` jamessingleton.me ```](https://jamessingleton.me/)
+You can see it live here: [`jamessingleton.me`](https://jamessingleton.me/)
 
 ## About the site
 
-* [Next.js](https://nextjs.org/)
-* [Tailwind CSS](https://tailwindcss.com/)
-* [Contentful](https://www.contentful.com/)
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Contentful](https://www.contentful.com/)
 
 ## 🛠 Installation & Set Up
 

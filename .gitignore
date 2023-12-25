@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+studio/node_modules
 
 # Yarn 2
 .yarn/*
@@ -38,3 +39,9 @@ yarn-error.log*
 .env.production.local
 .vercel
 .env
+
+public/sitemap.xml
+public/sitemap-*.xml
+public/robots.txt
+
+studio/dist

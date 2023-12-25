@@ -1,0 +1,24 @@
+{
+  "titleTemplate": "%s - James Singleton",
+  "description": "Software engineer, founder, and amateur photographer",
+  "openGraph": {
+    "description": "Software engineer, founder, and amateur photographer",
+    "type": "website",
+    "locale": "en_US",
+    "url": "https://www.jamessingleton.me",
+    "site_name": "James Singleton",
+    "images": [
+      {
+        "url": "/images/icons/profile.png",
+        "width": 513,
+        "height": 512,
+        "alt": "James Singleton"
+      }
+    ]
+  },
+  "twitter": {
+    "handle": "@Design__Pattern",
+    "site": "@Design__Pattern",
+    "cardType": "summary_large_image"
+  }
+}
