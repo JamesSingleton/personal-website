@@ -33,7 +33,7 @@
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sharp": "^0.33.2"
+    "sharp": "^0.33.1"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
