@@ -24,7 +24,7 @@ const projects = [
     description:
       'A website for finding resources available for the residents of Maricopa, AZ.',
     link: {
-      href: 'https://coparesources.vercel.app/',
+      href: 'https://www.coparesources.com',
       label: 'coparesources.com',
     },
     // logo: logoAnimaginary,
@@ -34,7 +34,7 @@ const projects = [
     description:
       'Real-time video streaming library, optimized for interstellar transmission.',
     link: {
-      href: 'https://www.maricopaseniorliving.org/',
+      href: 'https://www.maricopaseniorliving.org',
       label: 'maricopaseniorliving.org',
     },
     logo: logoMaricopaSeniorLiving,
