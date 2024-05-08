@@ -23,16 +23,16 @@
   },
   "homepage": "https://github.com/JamesSingleton/singleton#readme",
   "dependencies": {
-    "@headlessui/react": "^1.7.18",
+    "@headlessui/react": "^2.0.3",
     "clsx": "^2.1.1",
     "feed": "^4.2.2",
     "focus-visible": "^5.2.0",
     "geist": "^1.3.0",
-    "lucide-react": "^0.373.0",
+    "lucide-react": "^0.378.0",
     "next": "^14.2.3",
     "next-themes": "^0.3.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "sharp": "^0.33.2"
   },
   "devDependencies": {
