@@ -1,3 +1,4 @@
+import { JSX } from 'react'
 import type { WithChildren } from './common'
 
 export interface CardProps extends WithChildren {
