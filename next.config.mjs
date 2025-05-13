@@ -20,7 +20,6 @@ const securityHeaders = [
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   productionBrowserSourceMaps: true,
-  swcMinify: true,
   reactStrictMode: true,
   images: {
     formats: ['image/avif', 'image/webp'],

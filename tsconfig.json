@@ -19,10 +19,11 @@
       "@lib/*": ["lib/*"],
       "@config/*": ["config/*"],
       "@components/*": ["components/*"],
-      "@styles/*": ["styles/*"],
+      "@/styles/*": ["styles/*"],
       "@public/*": ["public/*"],
       "@types": ["types/index"],
-      "@types/*": ["types/*"]
+      "@types/*": ["types/*"],
+      "@/*": ["./*"]
     },
     "plugins": [
       {
