@@ -1,12 +1,11 @@
 import { type Metadata } from 'next'
 import Image from 'next/image'
-
-import { Card } from '@components/Card'
-import { SimpleLayout } from '@components/SimpleLayout'
-import logoRedshirtSports from '@public/images/logos/redshirt-sports.svg'
-import logo347Facts from '@public/images/logos/347Facts-Logo.svg'
-import logoHLBElectric from '@public/images/logos/hlb-electric-logo-small.svg'
-import logoMaricopaSeniorLiving from '@public/images/logos/maricopa-senior-living.jpg'
+import { Card } from '@/components/Card'
+import { SimpleLayout } from '@/components/SimpleLayout'
+import logo347Facts from '@/public/images/logos/347Facts-Logo.svg'
+import logoHLBElectric from '@/public/images/logos/hlb-electric-logo-small.svg'
+import logoMaricopaSeniorLiving from '@/public/images/logos/maricopa-senior-living.jpg'
+import logoRedshirtSports from '@/public/images/logos/redshirt-sports.svg'
 
 const projects = [
   {

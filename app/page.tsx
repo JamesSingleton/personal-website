@@ -1,25 +1,24 @@
+import clsx from 'clsx'
+import { ArrowDownIcon, BriefcaseIcon } from 'lucide-react'
 import Image, { type ImageProps } from 'next/image'
 import Link from 'next/link'
-import clsx from 'clsx'
-import { BriefcaseIcon, ArrowDownIcon } from 'lucide-react'
-
-import { Container } from '@components/Container'
-import { Button } from '@components/Button'
+import { Button } from '@/components/Button'
+import { Container } from '@/components/Container'
 import {
   GitHubIcon,
   InstagramIcon,
   LinkedInIcon,
   TwitterIcon,
-} from '@components/SocialIcons'
+} from '@/components/SocialIcons'
+import logoAmericanExpress from '../public/images/logos/american-express.png'
+import logoInternetBrands from '../public/images/logos/internet-brands.png'
+import logoRedshirtSports from '../public/images/logos/redshirt-sports.svg'
+import logoZendesk from '../public/images/logos/zendesk-z.svg'
 import image1 from '../public/images/photos/image-1.jpg'
 import image2 from '../public/images/photos/image-2.jpg'
 import image3 from '../public/images/photos/image-3.jpg'
 import image4 from '../public/images/photos/image-4.jpg'
 import image5 from '../public/images/photos/image-5.jpg'
-import logoAmericanExpress from '../public/images/logos/american-express.png'
-import logoInternetBrands from '../public/images/logos/internet-brands.png'
-import logoRedshirtSports from '../public/images/logos/redshirt-sports.svg'
-import logoZendesk from '../public/images/logos/zendesk-z.svg'
 
 function SocialLink({
   icon: Icon,

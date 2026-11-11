@@ -1,21 +1,20 @@
 'use client'
 
-import { Fragment, useEffect, useRef, useState } from 'react'
+import {
+  Popover,
+  PopoverButton,
+  PopoverOverlay,
+  PopoverPanel,
+  Transition,
+  TransitionChild,
+} from '@headlessui/react'
+import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useTheme } from 'next-themes'
-import {
-  Popover,
-  Transition,
-  PopoverButton,
-  PopoverPanel,
-  PopoverOverlay,
-  TransitionChild,
-} from '@headlessui/react'
-import clsx from 'clsx'
-
-import { Container } from '@components/Container'
+import { Fragment, useEffect, useRef, useState } from 'react'
+import { Container } from '@/components/Container'
 import avatarImage from '../public/images/profile.png'
 
 function CloseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {

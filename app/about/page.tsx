@@ -1,15 +1,14 @@
+import clsx from 'clsx'
 import { type Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import clsx from 'clsx'
-
-import { Container } from '@components/Container'
+import { Container } from '@/components/Container'
 import {
   GitHubIcon,
   InstagramIcon,
   LinkedInIcon,
   TwitterIcon,
-} from '@components/SocialIcons'
+} from '@/components/SocialIcons'
 import portraitImage from '../../public/images/james_singleton.webp'
 
 function SocialLink({

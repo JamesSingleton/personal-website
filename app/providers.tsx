@@ -1,8 +1,8 @@
 'use client'
 
-import { createContext, useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 import { ThemeProvider, useTheme } from 'next-themes'
+import { createContext, useEffect, useRef } from 'react'
 
 function usePrevious<T>(value: T) {
   const ref = useRef<T>(undefined)

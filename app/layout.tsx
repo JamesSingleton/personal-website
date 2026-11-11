@@ -1,9 +1,8 @@
-import { type Metadata } from 'next'
-import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
-
-import { Header } from '@components/Header'
-import { Footer } from '@components/Footer'
+import { GeistSans } from 'geist/font/sans'
+import { type Metadata } from 'next'
+import { Footer } from '@/components/Footer'
+import { Header } from '@/components/Header'
 
 import '@/styles/tailwind.css'
 import { Providers } from './providers'
