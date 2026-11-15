@@ -1,0 +1,35 @@
+{
+  "name": "@workspace/sanity",
+  "version": "0.0.1",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "lint": "biome lint .",
+    "format": "biome format --write .",
+    "format:check": "biome format .",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@sanity/asset-utils": "^2.3.0",
+    "@sanity/client": "catalog:",
+    "@sanity/image-url": "^2.1.1",
+    "@workspace/env": "workspace:*",
+    "@workspace/sanity-blocks": "workspace:*",
+    "next-sanity": "13.3.4",
+    "react-is": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@workspace/typescript-config": "workspace:*",
+    "next": "16.4.5",
+    "sanity": "catalog:",
+    "typescript": "catalog:"
+  },
+  "exports": {
+    "./client": "./src/client.ts",
+    "./query": "./src/query.ts",
+    "./live": "./src/live.ts",
+    "./types": "./src/sanity.types.ts"
+  }
+}

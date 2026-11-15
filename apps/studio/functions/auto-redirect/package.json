@@ -1,0 +1,9 @@
+{
+  "name": "auto-redirect",
+  "type": "module",
+  "main": "index.ts",
+  "dependencies": {
+    "@sanity/client": "^7.28.0",
+    "@sanity/functions": "^1.11.0"
+  }
+}
