@@ -1,0 +1,255 @@
+"use client";
+
+import { useOptimistic } from "@sanity/visual-editing/react";
+import { env } from "@workspace/env/client";
+import { IntroHero } from "@workspace/sanity-blocks/intro-hero/index";
+import { CurrentRoles } from "@workspace/sanity-blocks/current-roles/index";
+import { ProjectGrid } from "@workspace/sanity-blocks/project-grid/index";
+import { PhotoGrid } from "@workspace/sanity-blocks/photo-grid/index";
+import { CareerList } from "@workspace/sanity-blocks/career-list/index";
+import { ToolList } from "@workspace/sanity-blocks/tool-list/index";
+import { CTABlock } from "@workspace/sanity-blocks/cta/index";
+import { FaqAccordion } from "@workspace/sanity-blocks/faq-accordion/index";
+import { FeatureCardsWithIcon } from "@workspace/sanity-blocks/feature-cards-icon/index";
+import { HeroBlock } from "@workspace/sanity-blocks/hero/index";
+import { HeroSplit } from "@workspace/sanity-blocks/hero-split/index";
+import { LogoCloud } from "@workspace/sanity-blocks/logo-cloud/index";
+import { RichTextBlock } from "@workspace/sanity-blocks/rich-text-block/index";
+import { ShowcaseGrid } from "@workspace/sanity-blocks/showcase-grid/index";
+import { SocialGrid } from "@workspace/sanity-blocks/social-grid/index";
+import { SubscribeNewsletter } from "@workspace/sanity-blocks/subscribe-newsletter/index";
+import { VideoFeature } from "@workspace/sanity-blocks/video-feature/index";
+import { cn } from "@workspace/tailwind-config/utils";
+import { createDataAttribute } from "next-sanity";
+
+import type { PageBuilderBlock, PagebuilderType } from "@/types";
+
+export type PageBuilderProps = {
+  readonly pageBuilder?: PageBuilderBlock[];
+  readonly id: string;
+  readonly type: string;
+};
+
+type SanityDataAttributeConfig = {
+  readonly id: string;
+  readonly type: string;
+  readonly path: string;
+};
+
+/**
+ * Renders the component for a single block, asserting the query result
+ * against its PagebuilderType so a GROQ or schema rename breaks the build
+ * instead of silently passing through `any`.
+ */
+function renderBlockComponent(
+  block: PageBuilderBlock,
+  isFirst: boolean,
+  dataSanity?: string
+) {
+  switch (block?._type) {
+    case "cta":
+      return <CTABlock {...(block as PagebuilderType<"cta">)} />;
+    case "faqAccordion":
+      return <FaqAccordion {...(block as PagebuilderType<"faqAccordion">)} />;
+    case "hero":
+      return (
+        <HeroBlock
+          {...(block as PagebuilderType<"hero">)}
+          dataSanity={dataSanity}
+          isFirst={isFirst}
+        />
+      );
+    case "heroSplit":
+      return (
+        <HeroSplit
+          {...(block as PagebuilderType<"heroSplit">)}
+          isFirst={isFirst}
+        />
+      );
+    case "featureCardsIcon":
+      return (
+        <FeatureCardsWithIcon
+          {...(block as PagebuilderType<"featureCardsIcon">)}
+        />
+      );
+    case "subscribeNewsletter":
+      return (
+        <SubscribeNewsletter
+          {...(block as PagebuilderType<"subscribeNewsletter">)}
+        />
+      );
+    case "logoCloud":
+      return <LogoCloud {...(block as PagebuilderType<"logoCloud">)} />;
+    case "socialGrid":
+      return <SocialGrid {...(block as PagebuilderType<"socialGrid">)} />;
+    case "showcaseGrid":
+      return <ShowcaseGrid {...(block as PagebuilderType<"showcaseGrid">)} />;
+    case "richTextBlock":
+      return <RichTextBlock {...(block as PagebuilderType<"richTextBlock">)} />;
+    case "videoFeature":
+      return <VideoFeature {...(block as PagebuilderType<"videoFeature">)} />;
+    case "introHero":
+      return <IntroHero {...(block as PagebuilderType<"introHero">)} />;
+    case "currentRoles":
+      return <CurrentRoles {...(block as PagebuilderType<"currentRoles">)} />;
+    case "projectGrid":
+      return <ProjectGrid {...(block as PagebuilderType<"projectGrid">)} />;
+    case "photoGrid":
+      return <PhotoGrid {...(block as PagebuilderType<"photoGrid">)} />;
+    case "careerList":
+      return <CareerList {...(block as PagebuilderType<"careerList">)} />;
+    case "toolList":
+      return <ToolList {...(block as PagebuilderType<"toolList">)} />;
+    default:
+      return null;
+  }
+}
+
+function createSanityDataAttribute(config: SanityDataAttributeConfig): string {
+  return createDataAttribute({
+    id: config.id,
+    baseUrl: env.NEXT_PUBLIC_SANITY_STUDIO_URL,
+    projectId: env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+    dataset: env.NEXT_PUBLIC_SANITY_DATASET,
+    type: config.type,
+    path: config.path,
+  }).toString();
+}
+
+function UnknownBlockError({
+  blockType,
+  blockKey,
+}: {
+  blockType: string;
+  blockKey: string;
+}) {
+  return (
+    <div
+      aria-label={`Unknown block type: ${blockType}`}
+      className="flex items-center justify-center rounded-lg border-2 border-muted-foreground/20 border-dashed bg-muted p-8 text-center text-muted-foreground"
+      key={`${blockType}-${blockKey}`}
+      role="alert"
+    >
+      <div className="space-y-2">
+        <p>Component not found for block type:</p>
+        <code className="rounded bg-background px-2 py-1 font-mono text-sm">
+          {blockType}
+        </code>
+      </div>
+    </div>
+  );
+}
+
+function useOptimisticPageBuilder(
+  initialBlocks: PageBuilderBlock[],
+  documentId: string
+) {
+  // biome-ignore lint/suspicious/noExplicitAny: <any is used to allow for dynamic component rendering>
+  return useOptimistic<PageBuilderBlock[], any>(
+    initialBlocks,
+    (currentBlocks, action) => {
+      // `action` is untyped and comes off the mutation stream, so a truthy
+      // non-array `pageBuilder` would throw out of `for...of` mid-render.
+      if (
+        action.id !== documentId ||
+        !Array.isArray(action.document?.pageBuilder)
+      ) {
+        return currentBlocks;
+      }
+
+      // The action carries the raw document, not the GROQ projection the page
+      // rendered from, so only its `_key` order is usable — take that and keep
+      // the resolved blocks. Keys with no resolved block (a just-inserted one)
+      // are dropped until revalidation projects them.
+      const resolved = new Map(
+        currentBlocks.map((block) => [block._key, block])
+      );
+      const reordered: PageBuilderBlock[] = [];
+      for (const raw of action.document.pageBuilder) {
+        const block = raw?._key ? resolved.get(raw._key) : undefined;
+        if (block) {
+          reordered.push(block);
+        }
+      }
+      return reordered;
+    }
+  );
+}
+
+function useBlockRenderer(id: string, type: string) {
+  const createBlockDataAttribute = (blockKey: string) =>
+    createSanityDataAttribute({
+      id,
+      type,
+      path: `pageBuilder[_key=="${blockKey}"]`,
+    });
+
+  const renderBlock = (block: PageBuilderBlock, index: number) => {
+    // The leading hero's wrapper is `display: contents` so the banner pins
+    // against this grid, and a box-less element measures 0x0 in the visual
+    // editing overlay — unselectable, undraggable. Hand the attribute to the
+    // hero instead, which puts it on the banner box.
+    const isLeadingHero = index === 0 && block?._type === "hero";
+    const dataSanity = block && createBlockDataAttribute(block._key);
+    const content =
+      block &&
+      renderBlockComponent(
+        block,
+        index === 0,
+        isLeadingHero ? dataSanity : undefined
+      );
+
+    if (!content) {
+      return (
+        <UnknownBlockError
+          blockKey={block?._key ?? ""}
+          blockType={block?._type ?? "unknown"}
+          key={`${block?._type}-${block?._key}`}
+        />
+      );
+    }
+
+    return (
+      <div
+        className={cn(
+          "min-w-0",
+          isLeadingHero ? "contents" : "relative z-10 bg-background"
+        )}
+        data-sanity={isLeadingHero ? undefined : dataSanity}
+        key={`${block._type}-${block._key}`}
+      >
+        {content}
+      </div>
+    );
+  };
+
+  return { renderBlock };
+}
+
+export function PageBuilder({
+  pageBuilder: initialBlocks = [],
+  id,
+  type,
+}: PageBuilderProps) {
+  const blocks = useOptimisticPageBuilder(initialBlocks, id);
+  const { renderBlock } = useBlockRenderer(id, type);
+
+  const containerDataAttribute = createSanityDataAttribute({
+    id,
+    type,
+    path: "pageBuilder",
+  });
+
+  if (!blocks.length) {
+    return null;
+  }
+
+  return (
+    <div
+      className="grid min-w-0 grid-cols-1"
+      data-sanity={containerDataAttribute}
+    >
+      {blocks.map(renderBlock)}
+    </div>
+  );
+}

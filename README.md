@@ -1,37 +1,37 @@
-# 👋 Welcome to my site's repo.
+# jamessingleton.me
 
-You can see it live here: [`jamessingleton.me`](https://jamessingleton.me/)
+My personal website: a Next.js 16 site and a standalone Sanity Studio in one
+pnpm + Turborepo monorepo, based on Roboto Studio's
+[Turbo Start Sanity](https://github.com/robotostudio/turbo-start-sanity).
 
-## About the site
+- `apps/web` — Next.js 16 (App Router, Cache Components, Sanity Live, Visual Editing)
+- `apps/studio` — Sanity Studio 6 (project `yp0fvwoh`, dataset `production`)
+- `packages/*` — shared Sanity queries, page-builder blocks, UI and config
 
-- [Next.js](https://nextjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Contentful](https://www.contentful.com/)
+## Getting started
 
-## 🛠 Installation & Set Up
+Requires Node 24+ and pnpm 11.24 (`corepack enable`).
 
-1. Install dependencies
+```sh
+pnpm install
+cp apps/web/.env.example apps/web/.env.local
+cp apps/studio/.env.example apps/studio/.env
+pnpm dev
+```
 
-   ```sh
-   yarn
-   ```
+Fill in `NEXT_PUBLIC_SANITY_PROJECT_ID=yp0fvwoh` and
+`NEXT_PUBLIC_SANITY_DATASET=production` for the web app, and
+`SANITY_STUDIO_PROJECT_ID` / `SANITY_STUDIO_DATASET` for the Studio. The site
+runs on `http://localhost:3000` and the Studio on `http://localhost:3333`. A
+`SANITY_API_READ_TOKEN` (Viewer) is only needed for drafts and live previews.
 
-2. Start the development server
+## Common tasks
 
-   ```sh
-   yarn dev
-   ```
+```sh
+pnpm lint && pnpm check-types && pnpm test
+pnpm --filter studio extract && pnpm type   # after schema or query changes
+pnpm build
+```
 
-## 🚀 Building and Running for Production
-
-1. Generate a full static production build
-
-   ```sh
-   yarn build
-   ```
-
-2. Preview the site as it will appear once deployed
-
-   ```sh
-   yarn start
-   ```
+`CLAUDE.md` documents the architecture, the page-builder blocks and the
+conventions in detail.

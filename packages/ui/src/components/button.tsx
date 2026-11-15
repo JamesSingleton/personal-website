@@ -1,0 +1,78 @@
+import { Button as ButtonPrimitive } from "@ui-sdk/react/button";
+import { cn } from "@workspace/tailwind-config/utils";
+import { cva, type VariantProps } from "class-variance-authority";
+import {
+  type ComponentProps,
+  cloneElement,
+  isValidElement,
+  type ReactElement,
+  type ReactNode,
+} from "react";
+
+const buttonVariants = cva(
+  "focus-ring inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-none font-medium text-base leading-6 transition-transform duration-150 ease-out active:scale-[0.96] motion-reduce:transition-none motion-reduce:active:scale-100 disabled:pointer-events-none disabled:opacity-50 data-disabled:pointer-events-none data-disabled:opacity-40 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+  {
+    variants: {
+      variant: {
+        default:
+          "bg-primary text-primary-foreground duration-150 ease-out hover:bg-accent-green hover:text-accent-green-foreground",
+        destructive:
+          "bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:bg-destructive/60 dark:focus-visible:ring-destructive/40",
+        outline:
+          "box-border border border-foreground bg-transparent text-foreground duration-150 ease-out hover:bg-foreground hover:text-background active:bg-foreground/90",
+        secondary:
+          "bg-accent-green text-accent-green-foreground duration-150 ease-out hover:bg-primary hover:text-primary-foreground",
+        ghost:
+          "hover:bg-zinc-50 hover:text-accent-foreground dark:hover:bg-zinc-950",
+        link: "link-underline text-primary after:-bottom-0.5! after:transition-none!",
+      },
+      size: {
+        default: "h-12 px-8 has-[>svg]:px-6",
+        sm: "h-10 px-5 has-[>svg]:px-4",
+        lg: "h-12 px-8 has-[>svg]:px-6",
+        icon: "size-10",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default",
+    },
+  }
+);
+
+type ButtonProps = ComponentProps<typeof ButtonPrimitive> &
+  VariantProps<typeof buttonVariants> & {
+    /** Render the single child element (e.g. a Next `<Link>`) as the button. */
+    asChild?: boolean;
+  };
+
+function Button({
+  className,
+  variant,
+  size,
+  asChild = false,
+  children,
+  ...props
+}: ButtonProps) {
+  const shared = {
+    className: cn(buttonVariants({ variant, size, className })),
+    "data-variant": variant ?? "default",
+    ...props,
+  };
+
+  if (asChild && isValidElement(children)) {
+    const child = children as ReactElement<{ children?: ReactNode }>;
+    return (
+      <ButtonPrimitive
+        {...shared}
+        render={cloneElement(child, { children: undefined })}
+      >
+        {child.props.children}
+      </ButtonPrimitive>
+    );
+  }
+
+  return <ButtonPrimitive {...shared}>{children}</ButtonPrimitive>;
+}
+
+export { Button, buttonVariants };
